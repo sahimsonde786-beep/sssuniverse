@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plan Your Trip | SSSuniverse</title>
+    
+    <!-- Load Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Load Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,700;1,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        serif: ['Playfair Display', 'serif'],
+                    },
+                    colors: {
+                        brand: {
+                            primary: '#0369a1',
+                            dark: '#111827',
+                            light: '#f8fafc',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        .hover-zoom img { transition: transform 0.5s ease; }
+        .hover-zoom:hover img { transform: scale(1.05); }
+    </style>
+</head>
+<body class="bg-white font-sans text-gray-800 antialiased selection:bg-brand-primary selection:text-white">
+
+    <nav class="bg-white shadow-sm sticky top-0 z-50 border-b border-gray-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <div class="flex-shrink-0 flex items-center cursor-pointer">
+                    <a href="index.html" class="font-serif text-3xl font-bold text-brand-dark tracking-tight">SSS<span class="text-brand-primary">universe</span></a>
+                </div>
+                
+                <div class="hidden lg:flex space-x-8 items-center">
+                    <a href="index.html" class="text-sm font-medium text-gray-600 hover:text-brand-primary transition-colors uppercase tracking-wide">Home</a>
+                    <a href="plan.html" class="text-sm font-semibold text-brand-primary border-b-2 border-brand-primary pb-1 uppercase tracking-wide">Plan</a>
+                    <a href="destinations.html" class="text-sm font-medium text-gray-600 hover:text-brand-primary transition-colors uppercase tracking-wide">Destinations</a>
+                    <a href="gear-hub.html" class="text-sm font-medium text-gray-600 hover:text-brand-primary transition-colors uppercase tracking-wide">Gear Hub</a>
+                    <a href="#" class="text-sm font-medium text-gray-600 hover:text-brand-primary transition-colors uppercase tracking-wide">About</a>
+                    <a href="#" class="text-sm font-medium text-gray-600 hover:text-brand-primary transition-colors uppercase tracking-wide">Contact</a>
+                    <a href="#" class="text-sm font-medium text-gray-600 hover:text-brand-primary transition-colors uppercase tracking-wide">Blogs</a>
+                </div>
+
+                <div class="lg:hidden flex items-center">
+                    <button class="text-gray-600 hover:text-brand-dark focus:outline-none">
+                        <i class="fa-solid fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div class="relative bg-brand-dark h-[400px] flex items-center justify-center overflow-hidden">
+        <div class="absolute inset-0 z-0">
+            <!-- Using the road/walking image to symbolize the journey and planning -->
+            <img src="IMG20251102181718.jpg" alt="Two friends walking on a trail" class="w-full h-full object-cover opacity-60 object-center" onerror="this.src='https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?auto=format&fit=crop&w=1920&q=80'">
+            <div class="absolute inset-0 bg-gradient-to-t from-brand-dark via-transparent to-transparent"></div>
+        </div>
+        
+        <div class="relative z-10 text-center px-4 w-full max-w-4xl mx-auto mt-8">
+            <span class="text-brand-primary font-bold text-sm tracking-widest uppercase mb-4 block">Master Guide</span>
+            <h1 class="text-4xl md:text-6xl font-black text-white mb-6 tracking-tight drop-shadow-lg uppercase">Plan Your Next Escape</h1>
+            <p class="text-xl text-gray-300 font-medium drop-shadow-md max-w-2xl mx-auto">From saving money and crafting itineraries to embracing solo travel and life on the road. Let's make it happen.</p>
+        </div>
+    </div>
+
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+        
+        <!-- Quick Steps Section -->
+        <div class="mb-20 text-center">
+            <h2 class="text-2xl font-bold text-gray-900 mb-10 uppercase tracking-wide border-b-2 border-brand-primary inline-block pb-2">The Planning Process</h2>
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div class="p-6 bg-white rounded-sm shadow-sm border border-gray-100 relative pt-10">
+                    <div class="w-12 h-12 bg-brand-primary text-white rounded-full flex items-center justify-center font-black text-xl absolute -top-6 left-1/2 transform -translate-x-1/2 border-4 border-white shadow-sm">1</div>
+                    <i class="fa-solid fa-map-location-dot text-3xl text-gray-300 mb-4 block"></i>
+                    <h3 class="font-bold text-gray-900 mb-2">Find Inspiration</h3>
+                    <p class="text-sm text-gray-600">Discover your next destination using our region-by-region guides and itineraries.</p>
+                </div>
+                <div class="p-6 bg-white rounded-sm shadow-sm border border-gray-100 relative pt-10">
+                    <div class="w-12 h-12 bg-brand-primary text-white rounded-full flex items-center justify-center font-black text-xl absolute -top-6 left-1/2 transform -translate-x-1/2 border-4 border-white shadow-sm">2</div>
+                    <i class="fa-solid fa-piggy-bank text-3xl text-gray-300 mb-4 block"></i>
+                    <h3 class="font-bold text-gray-900 mb-2">Budget & Save</h3>
+                    <p class="text-sm text-gray-600">Learn practical tips to save money before you leave and travel cheaper on the road.</p>
+                </div>
+                <div class="p-6 bg-white rounded-sm shadow-sm border border-gray-100 relative pt-10">
+                    <div class="w-12 h-12 bg-brand-primary text-white rounded-full flex items-center justify-center font-black text-xl absolute -top-6 left-1/2 transform -translate-x-1/2 border-4 border-white shadow-sm">3</div>
+                    <i class="fa-solid fa-clipboard-list text-3xl text-gray-300 mb-4 block"></i>
+                    <h3 class="font-bold text-gray-900 mb-2">Build Itinerary</h3>
+                    <p class="text-sm text-gray-600">Steal my step-by-step travel routes for Asia, Europe, and local Maharashtra treks.</p>
+                </div>
+                <div class="p-6 bg-white rounded-sm shadow-sm border border-gray-100 relative pt-10">
+                    <div class="w-12 h-12 bg-brand-primary text-white rounded-full flex items-center justify-center font-black text-xl absolute -top-6 left-1/2 transform -translate-x-1/2 border-4 border-white shadow-sm">4</div>
+                    <i class="fa-solid fa-backpack text-3xl text-gray-300 mb-4 block"></i>
+                    <h3 class="font-bold text-gray-900 mb-2">Pack Your Bags</h3>
+                    <p class="text-sm text-gray-600">Get the right gear. Check out honest reviews on the best backpacks and boots.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Core Planning Topics (Bento Grid Style) -->
+        <div class="mb-20">
+            <h2 class="text-3xl font-black text-gray-900 uppercase tracking-tight mb-8">Master Your Travel Strategy</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                
+                <!-- Topic 1: Itineraries -->
+                <a href="#" class="group hover-zoom relative h-80 rounded-sm overflow-hidden bg-gray-900 block cursor-pointer col-span-1 md:col-span-2">
+                    <img src="IMG20260624090505.jpg" alt="Vast valley view" class="w-full h-full object-cover opacity-60 group-hover:opacity-40 transition-opacity">
+                    <div class="absolute inset-0 p-8 flex flex-col justify-end">
+                        <div class="bg-brand-primary w-12 h-12 rounded-full flex items-center justify-center mb-4 transform translate-y-4 opacity-0 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-300">
+                            <i class="fa-solid fa-arrow-right text-white"></i>
+                        </div>
+                        <h3 class="text-3xl font-black text-white uppercase tracking-tight mb-2">Itineraries & Routes</h3>
+                        <p class="text-gray-200 font-medium">Day-by-day guides for backpacking Southeast Asia, touring Europe, and weekend treks in Pune.</p>
+                    </div>
+                </a>
+
+                <!-- Topic 2: Saving Money -->
+                <a href="#" class="group hover-zoom relative h-80 rounded-sm overflow-hidden bg-brand-primary block cursor-pointer">
+                    <img src="https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?w=800&q=80" alt="Saving money" class="w-full h-full object-cover opacity-20 mix-blend-multiply group-hover:opacity-40 transition-opacity">
+                    <div class="absolute inset-0 p-8 flex flex-col justify-center text-center items-center">
+                        <i class="fa-solid fa-wallet text-4xl text-white mb-4 group-hover:-translate-y-2 transition-transform"></i>
+                        <h3 class="text-2xl font-bold text-white uppercase tracking-tight mb-2">How to Save</h3>
+                        <p class="text-brand-light text-sm font-medium">Budgeting tips, travel hacking, and finding cheap flights.</p>
+                    </div>
+                </a>
+
+                <!-- Topic 3: Solo Travel -->
+                <a href="#" class="group hover-zoom relative h-64 rounded-sm overflow-hidden bg-gray-900 block cursor-pointer">
+                    <img src="IMG20260629092347.jpg" alt="Solo trekker" class="w-full h-full object-cover opacity-70 group-hover:opacity-50 transition-opacity">
+                    <div class="absolute inset-0 p-6 flex flex-col justify-end bg-gradient-to-t from-black/90 to-transparent">
+                        <h3 class="text-xl font-bold text-white uppercase tracking-tight mb-1">Solo Travel Guide</h3>
+                        <p class="text-gray-300 text-sm">Overcoming fear and making friends abroad.</p>
+                    </div>
+                </a>
+
+                <!-- Topic 4: Life on the Road -->
+                <a href="#" class="group hover-zoom relative h-64 rounded-sm overflow-hidden bg-gray-900 block cursor-pointer">
+                    <img src="IMG20251003074410.jpg" alt="Group of friends on a hill" class="w-full h-full object-cover opacity-70 group-hover:opacity-50 transition-opacity">
+                    <div class="absolute inset-0 p-6 flex flex-col justify-end bg-gradient-to-t from-black/90 to-transparent">
+                        <h3 class="text-xl font-bold text-white uppercase tracking-tight mb-1">Life on the Road</h3>
+                        <p class="text-gray-300 text-sm">Digital nomad tips, staying healthy, and slow travel.</p>
+                    </div>
+                </a>
+
+                <!-- Topic 5: Safety & Insurance -->
+                <a href="#" class="group hover-zoom relative h-64 rounded-sm overflow-hidden bg-gray-900 block cursor-pointer">
+                    <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=800&q=80" alt="Travel documents" class="w-full h-full object-cover opacity-70 group-hover:opacity-50 transition-opacity">
+                    <div class="absolute inset-0 p-6 flex flex-col justify-end bg-gradient-to-t from-black/90 to-transparent">
+                        <h3 class="text-xl font-bold text-white uppercase tracking-tight mb-1">Safety & Visas</h3>
+                        <p class="text-gray-300 text-sm">Travel insurance, border crossings, and staying safe.</p>
+                    </div>
+                </a>
+
+            </div>
+        </div>
+
+        <hr class="border-gray-200 my-16">
+
+        <!-- Featured Planning Articles -->
+        <div>
+            <div class="flex items-end justify-between mb-10">
+                <h2 class="text-3xl font-black text-gray-900 uppercase tracking-tight">Essential Reading</h2>
+                <a href="#" class="text-brand-primary font-bold hover:underline text-sm uppercase tracking-wide hidden sm:block">View All Planning Posts &rarr;</a>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+                
+                <!-- Article 1 -->
+                <article class="flex flex-col sm:flex-row gap-6 group cursor-pointer">
+                    <div class="sm:w-2/5 h-48 flex-shrink-0 hover-zoom overflow-hidden rounded-sm bg-gray-100">
+                        <img src="IMG20260624090104.jpg" alt="Trekkers" class="w-full h-full object-cover">
+                    </div>
+                    <div class="sm:w-3/5 flex flex-col justify-center">
+                        <span class="text-[10px] font-bold text-brand-primary uppercase tracking-widest mb-2">Life on the Road</span>
+                        <h3 class="text-xl font-bold text-gray-900 mb-3 leading-tight group-hover:text-brand-primary transition-colors">How to Find Your Tribe When Traveling Solo</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed mb-4 line-clamp-3">Hostels, trekking groups, and online communities. Here is exactly how to meet like-minded adventurers when you start your journey alone.</p>
+                        <span class="text-gray-900 font-bold text-xs uppercase tracking-wider">Read Post &rarr;</span>
+                    </div>
+                </article>
+
+                <!-- Article 2 -->
+                <article class="flex flex-col sm:flex-row gap-6 group cursor-pointer">
+                    <div class="sm:w-2/5 h-48 flex-shrink-0 hover-zoom overflow-hidden rounded-sm bg-gray-100">
+                        <img src="https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=800&q=80" alt="Planning map" class="w-full h-full object-cover">
+                    </div>
+                    <div class="sm:w-3/5 flex flex-col justify-center">
+                        <span class="text-[10px] font-bold text-brand-primary uppercase tracking-widest mb-2">Budgeting</span>
+                        <h3 class="text-xl font-bold text-gray-900 mb-3 leading-tight group-hover:text-brand-primary transition-colors">The $50/Day Rule: Budgeting for Europe & Asia</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed mb-4 line-clamp-3">A realistic breakdown of how to manage your daily expenses across different continents without sacrificing the experience.</p>
+                        <span class="text-gray-900 font-bold text-xs uppercase tracking-wider">Read Post &rarr;</span>
+                    </div>
+                </article>
+
+                <!-- Article 3 -->
+                <article class="flex flex-col sm:flex-row gap-6 group cursor-pointer">
+                    <div class="sm:w-2/5 h-48 flex-shrink-0 hover-zoom overflow-hidden rounded-sm bg-gray-100">
+                        <img src="IMG20260629095114.jpg" alt="Trekking gear" class="w-full h-full object-cover">
+                    </div>
+                    <div class="sm:w-3/5 flex flex-col justify-center">
+                        <span class="text-[10px] font-bold text-brand-primary uppercase tracking-widest mb-2">Preparation</span>
+                        <h3 class="text-xl font-bold text-gray-900 mb-3 leading-tight group-hover:text-brand-primary transition-colors">The Ultimate Monsoon Trekking Checklist</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed mb-4 line-clamp-3">Before you hit the trails in Maharashtra during the rains, make sure you have these 10 essential pieces of waterproof gear.</p>
+                        <span class="text-gray-900 font-bold text-xs uppercase tracking-wider">Read Post &rarr;</span>
+                    </div>
+                </article>
+                
+                <!-- Article 4 -->
+                <article class="flex flex-col sm:flex-row gap-6 group cursor-pointer">
+                    <div class="sm:w-2/5 h-48 flex-shrink-0 hover-zoom overflow-hidden rounded-sm bg-gray-100">
+                        <img src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=800&q=80" alt="Mountain Planning" class="w-full h-full object-cover">
+                    </div>
+                    <div class="sm:w-3/5 flex flex-col justify-center">
+                        <span class="text-[10px] font-bold text-brand-primary uppercase tracking-widest mb-2">Itineraries</span>
+                        <h3 class="text-xl font-bold text-gray-900 mb-3 leading-tight group-hover:text-brand-primary transition-colors">How to Plan a Multi-Country Backpacking Trip</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed mb-4 line-clamp-3">Stop stressing over border crossings. Here is a blueprint for connecting countries across Southeast Asia smoothly.</p>
+                        <span class="text-gray-900 font-bold text-xs uppercase tracking-wider">Read Post &rarr;</span>
+                    </div>
+                </article>
+
+            </div>
+        </div>
+
+    </main>
+
+    <!-- Newsletter / Lead Magnet -->
+    <div class="bg-gray-100 py-20 border-t border-gray-200">
+        <div class="max-w-4xl mx-auto px-4 text-center">
+            <h2 class="text-3xl font-black text-gray-900 mb-4 uppercase">Want My Free Trip Planning Checklist?</h2>
+            <p class="text-lg text-gray-600 mb-8 max-w-2xl mx-auto">Get a downloadable PDF of exactly how I plan, budget, and pack for a 3-month international trip, straight to your inbox.</p>
+            <form class="flex flex-col sm:flex-row gap-4 justify-center">
+                <input type="email" placeholder="Your best email address" required class="px-6 py-4 rounded-sm border border-gray-300 w-full sm:w-96 focus:outline-none focus:border-brand-primary focus:ring-1 focus:ring-brand-primary">
+                <button type="submit" class="bg-brand-primary text-white font-bold px-8 py-4 rounded-sm hover:bg-sky-800 transition-colors uppercase tracking-wider">Send It To Me</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-brand-dark text-gray-300 pt-16 pb-8">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
+                
+                <div>
+                    <h4 class="font-serif text-2xl font-bold text-white tracking-tight mb-6">SSS<span class="text-brand-primary">universe</span></h4>
+                    <p class="text-sm text-gray-400 mb-6 leading-relaxed">Helping you travel smarter, trek harder, and explore the world with practical guides and honest gear reviews.</p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="w-8 h-8 rounded-full bg-gray-800 flex items-center justify-center hover:bg-brand-primary hover:text-white transition-colors"><i class="fa-brands fa-instagram text-sm"></i></a>
+                        <a href="#" class="w-8 h-8 rounded-full bg-gray-800 flex items-center justify-center hover:bg-brand-primary hover:text-white transition-colors"><i class="fa-brands fa-youtube text-sm"></i></a>
+                        <a href="#" class="w-8 h-8 rounded-full bg-gray-800 flex items-center justify-center hover:bg-brand-primary hover:text-white transition-colors"><i class="fa-brands fa-twitter text-sm"></i></a>
+                    </div>
+                </div>
+
+                <div>
+                    <h4 class="text-white font-bold uppercase tracking-wider text-sm mb-6">Explore</h4>
+                    <ul class="space-y-3 text-sm">
+                        <li><a href="index.html" class="hover:text-brand-primary transition-colors">Home</a></li>
+                        <li><a href="plan.html" class="hover:text-brand-primary transition-colors">Plan Your Trip</a></li>
+                        <li><a href="destinations.html" class="hover:text-brand-primary transition-colors">Destinations</a></li>
+                        <li><a href="gear-hub.html" class="hover:text-brand-primary transition-colors">Gear Hub</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="text-white font-bold uppercase tracking-wider text-sm mb-6">Top Regions</h4>
+                    <ul class="space-y-3 text-sm">
+                        <li><a href="#" class="hover:text-brand-primary transition-colors">Maharashtra Treks</a></li>
+                        <li><a href="#" class="hover:text-brand-primary transition-colors">Southeast Asia</a></li>
+                        <li><a href="#" class="hover:text-brand-primary transition-colors">Western Europe</a></li>
+                        <li><a href="#" class="hover:text-brand-primary transition-colors">The Balkans</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="text-white font-bold uppercase tracking-wider text-sm mb-6">Info</h4>
+                    <ul class="space-y-3 text-sm">
+                        <li><a href="#" class="hover:text-brand-primary transition-colors">About SSSuniverse</a></li>
+                        <li><a href="#" class="hover:text-brand-primary transition-colors">Contact</a></li>
+                        <li><a href="#" class="hover:text-brand-primary transition-colors">Privacy Policy</a></li>
+                        <li><a href="#" class="hover:text-brand-primary transition-colors">Terms of Service</a></li>
+                    </ul>
+                </div>
+
+            </div>
+            
+            <div class="pt-8 border-t border-gray-800 text-sm text-center text-gray-500">
+                &copy; <script>document.write(new Date().getFullYear())</script> SSSuniverse. All rights reserved. Designed for adventure.
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>

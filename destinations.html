@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Destinations | SSSuniverse</title>
+    
+    <!-- Load Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Load Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,700;1,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        serif: ['Playfair Display', 'serif'],
+                    },
+                    colors: {
+                        brand: {
+                            primary: '#0369a1',
+                            dark: '#111827',
+                            light: '#f8fafc',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .hover-zoom img { transition: transform 0.4s ease; }
+        .hover-zoom:hover img { transform: scale(1.05); }
+    </style>
+</head>
+<body class="bg-white font-sans text-gray-800 antialiased">
+
+    <nav class="bg-white shadow-sm sticky top-0 z-50 border-b border-gray-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <div class="flex-shrink-0 flex items-center cursor-pointer">
+                    <a href="index.html" class="font-serif text-3xl font-bold text-brand-dark tracking-tight">SSS<span class="text-brand-primary">universe</span></a>
+                </div>
+                
+                <div class="hidden lg:flex space-x-8 items-center">
+                    <a href="index.html" class="text-sm font-medium text-gray-600 hover:text-brand-primary transition-colors uppercase tracking-wide">Home</a>
+                    <a href="#" class="text-sm font-medium text-gray-600 hover:text-brand-primary transition-colors uppercase tracking-wide">Plan</a>
+                    <a href="destinations.html" class="text-sm font-semibold text-brand-primary border-b-2 border-brand-primary pb-1 uppercase tracking-wide">Destinations</a>
+                    <a href="gear-hub.html" class="text-sm font-medium text-gray-600 hover:text-brand-primary transition-colors uppercase tracking-wide">Gear Hub</a>
+                    <a href="#" class="text-sm font-medium text-gray-600 hover:text-brand-primary transition-colors uppercase tracking-wide">About</a>
+                    <a href="#" class="text-sm font-medium text-gray-600 hover:text-brand-primary transition-colors uppercase tracking-wide">Contact</a>
+                    <a href="#" class="text-sm font-medium text-gray-600 hover:text-brand-primary transition-colors uppercase tracking-wide">Blogs</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div class="bg-gray-50 py-16 border-b border-gray-200">
+        <div class="max-w-4xl mx-auto px-4 text-center">
+            <h1 class="text-4xl md:text-5xl font-black text-gray-900 mb-6 uppercase tracking-tight">Where Do You Want To Go?</h1>
+            <p class="text-xl text-gray-600 font-medium">Select a region below to find comprehensive travel guides, trekking routes, itineraries, and budgeting tips.</p>
+        </div>
+    </div>
+
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+        
+        <!-- India / Local Section -->
+        <div class="mb-20">
+            <div class="flex items-center gap-4 mb-8">
+                <div class="h-1 w-12 bg-brand-primary"></div>
+                <h2 class="text-3xl font-black text-gray-900 uppercase tracking-tight">India & Local Treks</h2>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Using waterfall/rocky stream image -->
+                <a href="#" class="group hover-zoom relative h-80 rounded-sm overflow-hidden bg-gray-900 block cursor-pointer">
+                    <img src="IMG20260629092347.jpg" alt="Waterfall trek" class="w-full h-full object-cover opacity-80 group-hover:opacity-60 transition-opacity">
+                    <div class="absolute inset-0 flex flex-col justify-end p-6 bg-gradient-to-t from-black/80 to-transparent">
+                        <span class="text-brand-primary font-bold text-xs uppercase tracking-widest mb-1">Region</span>
+                        <h3 class="text-2xl font-bold text-white">Maharashtra Treks</h3>
+                    </div>
+                </a>
+                <!-- Using vast valley view image -->
+                <a href="#" class="group hover-zoom relative h-80 rounded-sm overflow-hidden bg-gray-900 block cursor-pointer">
+                    <img src="IMG20260624090505.jpg" alt="Vast valley view" class="w-full h-full object-cover opacity-80 group-hover:opacity-60 transition-opacity">
+                    <div class="absolute inset-0 flex flex-col justify-end p-6 bg-gradient-to-t from-black/80 to-transparent">
+                        <span class="text-brand-primary font-bold text-xs uppercase tracking-widest mb-1">City Guides</span>
+                        <h3 class="text-2xl font-bold text-white">Pune & Surrounds</h3>
+                    </div>
+                </a>
+                 <!-- Using misty mountain road -->
+                 <a href="#" class="group hover-zoom relative h-80 rounded-sm overflow-hidden bg-gray-900 block cursor-pointer">
+                    <img src="IMG20260624090708.jpg" alt="Misty road" class="w-full h-full object-cover opacity-80 group-hover:opacity-60 transition-opacity">
+                    <div class="absolute inset-0 flex flex-col justify-end p-6 bg-gradient-to-t from-black/80 to-transparent">
+                        <span class="text-brand-primary font-bold text-xs uppercase tracking-widest mb-1">Heritage</span>
+                        <h3 class="text-2xl font-bold text-white">Raigad Adventures</h3>
+                    </div>
+                </a>
+            </div>
+        </div>
+
+        <!-- Asia Section (Unsplash Fallbacks) -->
+        <div class="mb-20">
+            <div class="flex items-center gap-4 mb-8">
+                <div class="h-1 w-12 bg-brand-primary"></div>
+                <h2 class="text-3xl font-black text-gray-900 uppercase tracking-tight">Asia</h2>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <a href="#" class="group hover-zoom relative h-64 rounded-sm overflow-hidden bg-gray-900 block">
+                    <img src="https://images.unsplash.com/photo-1518509562904-e7ef99cdcc86?w=800&q=80" alt="Malaysia" class="w-full h-full object-cover opacity-70 group-hover:opacity-50">
+                    <h3 class="absolute inset-0 flex items-center justify-center text-xl font-bold text-white tracking-widest uppercase">Malaysia</h3>
+                </a>
+                <a href="#" class="group hover-zoom relative h-64 rounded-sm overflow-hidden bg-gray-900 block">
+                    <img src="https://images.unsplash.com/photo-1537996194471-e657df975ab4?w=800&q=80" alt="Indonesia" class="w-full h-full object-cover opacity-70 group-hover:opacity-50">
+                    <h3 class="absolute inset-0 flex items-center justify-center text-xl font-bold text-white tracking-widest uppercase">Indonesia</h3>
+                </a>
+                <a href="#" class="group hover-zoom relative h-64 rounded-sm overflow-hidden bg-gray-900 block">
+                    <img src="https://images.unsplash.com/photo-1540932239986-30128078f3c5?w=800&q=80" alt="Laos" class="w-full h-full object-cover opacity-70 group-hover:opacity-50">
+                    <h3 class="absolute inset-0 flex items-center justify-center text-xl font-bold text-white tracking-widest uppercase">Laos</h3>
+                </a>
+                <a href="#" class="group hover-zoom relative h-64 rounded-sm overflow-hidden bg-gray-900 block">
+                    <img src="https://images.unsplash.com/photo-1525625293386-3f8f99389edd?w=800&q=80" alt="Singapore" class="w-full h-full object-cover opacity-70 group-hover:opacity-50">
+                    <h3 class="absolute inset-0 flex items-center justify-center text-xl font-bold text-white tracking-widest uppercase">Singapore</h3>
+                </a>
+            </div>
+        </div>
+
+        <!-- Europe Section (Unsplash Fallbacks) -->
+        <div class="mb-10">
+            <div class="flex items-center gap-4 mb-8">
+                <div class="h-1 w-12 bg-brand-primary"></div>
+                <h2 class="text-3xl font-black text-gray-900 uppercase tracking-tight">Europe</h2>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <a href="#" class="group hover-zoom relative h-64 rounded-sm overflow-hidden bg-gray-900 block">
+                    <img src="https://images.unsplash.com/photo-1499856871958-5b9627545d1a?w=800&q=80" alt="France" class="w-full h-full object-cover opacity-70 group-hover:opacity-50">
+                    <h3 class="absolute inset-0 flex items-center justify-center text-xl font-bold text-white tracking-widest uppercase">France</h3>
+                </a>
+                <a href="#" class="group hover-zoom relative h-64 rounded-sm overflow-hidden bg-gray-900 block">
+                    <img src="https://images.unsplash.com/photo-1467269204594-9661b134dd2b?w=800&q=80" alt="Germany" class="w-full h-full object-cover opacity-70 group-hover:opacity-50">
+                    <h3 class="absolute inset-0 flex items-center justify-center text-xl font-bold text-white tracking-widest uppercase">Germany</h3>
+                </a>
+                <a href="#" class="group hover-zoom relative h-64 rounded-sm overflow-hidden bg-gray-900 block">
+                    <img src="https://images.unsplash.com/photo-1555990538-7955ce778c18?w=800&q=80" alt="Croatia" class="w-full h-full object-cover opacity-70 group-hover:opacity-50">
+                    <h3 class="absolute inset-0 flex items-center justify-center text-xl font-bold text-white tracking-widest uppercase">Croatia</h3>
+                </a>
+                <a href="#" class="group hover-zoom relative h-64 rounded-sm overflow-hidden bg-gray-900 block">
+                    <img src="https://images.unsplash.com/photo-1524231757912-21f4fe3a7200?w=800&q=80" alt="Turkey" class="w-full h-full object-cover opacity-70 group-hover:opacity-50">
+                    <h3 class="absolute inset-0 flex items-center justify-center text-xl font-bold text-white tracking-widest uppercase">Turkey</h3>
+                </a>
+            </div>
+        </div>
+
+    </main>
+
+    <!-- Footer Simple -->
+    <footer class="bg-brand-dark text-gray-400 py-8 text-center text-sm border-t-4 border-brand-primary">
+        &copy; <script>document.write(new Date().getFullYear())</script> SSSuniverse. All rights reserved.
+    </footer>
+
+</body>
+</html>
