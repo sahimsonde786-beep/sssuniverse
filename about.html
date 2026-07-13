@@ -82,23 +82,3 @@
         </div>
         &copy; <script>document.write(new Date().getFullYear())</script> SSSuniverse. All rights reserved.
     </footer>
-</body>
-</html>
-```
-
-### Important: How to Ensure Interlinking Works
-To ensure you never have a "page not clickable" issue again, you need to perform a **one-time update** to the navigation code in **all** your files:
-
-1.  **Open** `index.html`, `destinations.html`, `gear-hub.html`, `plan.html`, and `about.html`.
-2.  **Locate** the `<nav>` section (the code starting with `<nav class="bg-white...">`).
-3.  **Replace** the links so they all look exactly like this:
-    ```html
-    <a href="index.html" class="...">Home</a>
-    <a href="plan.html" class="...">Plan</a>
-    <a href="destinations.html" class="...">Destinations</a>
-    <a href="gear-hub.html" class="...">Gear Hub</a>
-    <a href="about.html" class="...">About</a>
-    ```
-4.  **Save** every single file.
-
-Now, because every single page has the exact same navigation block, clicking "About" on the home page will take you to `about.html`, and clicking "Home" on the About page will bring you back to `index.html`. It will work perfectly!
