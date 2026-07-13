@@ -18,6 +18,7 @@
                 extend: {
                     fontFamily: {
                         sans: ['Inter', 'sans-serif'],
+                        serif: ['Playfair Display', 'serif'],
                     },
                     colors: {
                         brand: {
@@ -34,21 +35,30 @@
 <body class="bg-gray-50 font-sans text-gray-800 antialiased">
 
     <nav class="bg-white shadow-sm sticky top-0 z-50 border-b border-gray-100">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="flex justify-between items-center h-20">
-            <a href="index.html" class="font-serif text-3xl font-bold text-brand-dark tracking-tight">SSS<span class="text-brand-primary">universe</span></a>
-            <div class="hidden lg:flex space-x-8 items-center">
-                <a href="index.html" class="text-sm font-medium text-gray-600 hover:text-brand-primary uppercase tracking-wide">Home</a>
-                <a href="plan.html" class="text-sm font-medium text-gray-600 hover:text-brand-primary uppercase tracking-wide">Plan</a>
-                <a href="destinations.html" class="text-sm font-medium text-gray-600 hover:text-brand-primary uppercase tracking-wide">Destinations</a>
-                <a href="gear-hub.html" class="text-sm font-medium text-gray-600 hover:text-brand-primary uppercase tracking-wide">Gear Hub</a>
-                <a href="about.html" class="text-sm font-semibold text-brand-primary border-b-2 border-brand-primary pb-1 uppercase tracking-wide">About</a>
-                <a href="#" class="text-sm font-medium text-gray-600 hover:text-brand-primary uppercase tracking-wide">Contact</a>
-                <a href="#" class="text-sm font-medium text-gray-600 hover:text-brand-primary uppercase tracking-wide">Blogs</a>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <div class="flex-shrink-0 flex items-center cursor-pointer">
+                    <a href="index.html" class="font-serif text-3xl font-bold text-brand-dark tracking-tight">SSS<span class="text-brand-primary">universe</span></a>
+                </div>
+                
+                <div class="hidden lg:flex space-x-8 items-center">
+                    <a href="index.html" class="text-sm font-medium text-gray-600 hover:text-brand-primary transition-colors uppercase tracking-wide">Home</a>
+                    <a href="plan.html" class="text-sm font-medium text-gray-600 hover:text-brand-primary transition-colors uppercase tracking-wide">Plan</a>
+                    <a href="destinations.html" class="text-sm font-medium text-gray-600 hover:text-brand-primary transition-colors uppercase tracking-wide">Destinations</a>
+                    <a href="gear-hub.html" class="text-sm font-semibold text-brand-primary border-b-2 border-brand-primary pb-1 uppercase tracking-wide">Gear Hub</a>
+                    <a href="#" class="text-sm font-medium text-gray-600 hover:text-brand-primary transition-colors uppercase tracking-wide">About</a>
+                    <a href="#" class="text-sm font-medium text-gray-600 hover:text-brand-primary transition-colors uppercase tracking-wide">Contact</a>
+                    <a href="#" class="text-sm font-medium text-gray-600 hover:text-brand-primary transition-colors uppercase tracking-wide">Blogs</a>
+                </div>
+
+                <div class="lg:hidden flex items-center">
+                    <button class="text-gray-600 hover:text-brand-dark focus:outline-none">
+                        <i class="fa-solid fa-bars text-2xl"></i>
+                    </button>
+                </div>
             </div>
         </div>
-    </div>
-</nav>
+    </nav>
 
     <div class="bg-brand-dark text-white py-20 border-b-4 border-brand-primary">
         <div class="max-w-4xl mx-auto px-4 text-center">
@@ -60,7 +70,7 @@
     <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <div class="flex flex-col lg:flex-row gap-12">
             
-            <!-- Sidebar Navigation (Nomadic Matt Style) -->
+            <!-- Sidebar Navigation -->
             <div class="lg:w-1/4">
                 <div class="bg-white p-6 rounded-sm shadow-sm border border-gray-200 sticky top-28">
                     <h3 class="font-bold text-lg text-gray-900 mb-4 border-b pb-2 uppercase tracking-wide">Categories</h3>
@@ -77,10 +87,10 @@
             <!-- Main Review Feed -->
             <div class="lg:w-3/4 space-y-8">
                 
-                <!-- Review Card 1 (Trekking Focus using Unsplash) -->
+                <!-- Review Card 1 -->
                 <div class="bg-white rounded-sm shadow-sm border border-gray-200 flex flex-col md:flex-row overflow-hidden group">
                     <div class="md:w-2/5 h-64 md:h-auto bg-gray-100 overflow-hidden">
-                        <img src="https://images.unsplash.com/photo-1622260614153-03223fb72052?w=800&q=80" alt="Backpack" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                        <img src="IMG20260629095114.jpg" alt="Backpack and gear" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" onerror="this.src='https://images.unsplash.com/photo-1622260614153-03223fb72052?w=800&q=80'">
                     </div>
                     <div class="md:w-3/5 p-8 flex flex-col justify-center">
                         <span class="text-[10px] font-bold text-gray-400 uppercase tracking-widest mb-2">Backpacks</span>
@@ -119,9 +129,57 @@
         </div>
     </main>
     
-    <!-- Footer Simple -->
-    <footer class="bg-brand-dark text-gray-400 py-8 text-center text-sm border-t-4 border-brand-primary">
-        &copy; <script>document.write(new Date().getFullYear())</script> SSSuniverse. All rights reserved.
+    <!-- Footer -->
+    <footer class="bg-brand-dark text-gray-300 pt-16 pb-8">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
+                
+                <div>
+                    <h4 class="font-serif text-2xl font-bold text-white tracking-tight mb-6">SSS<span class="text-brand-primary">universe</span></h4>
+                    <p class="text-sm text-gray-400 mb-6 leading-relaxed">Helping you travel smarter, trek harder, and explore the world with practical guides and honest gear reviews.</p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="w-8 h-8 rounded-full bg-gray-800 flex items-center justify-center hover:bg-brand-primary hover:text-white transition-colors"><i class="fa-brands fa-instagram text-sm"></i></a>
+                        <a href="#" class="w-8 h-8 rounded-full bg-gray-800 flex items-center justify-center hover:bg-brand-primary hover:text-white transition-colors"><i class="fa-brands fa-youtube text-sm"></i></a>
+                        <a href="#" class="w-8 h-8 rounded-full bg-gray-800 flex items-center justify-center hover:bg-brand-primary hover:text-white transition-colors"><i class="fa-brands fa-twitter text-sm"></i></a>
+                    </div>
+                </div>
+
+                <div>
+                    <h4 class="text-white font-bold uppercase tracking-wider text-sm mb-6">Explore</h4>
+                    <ul class="space-y-3 text-sm">
+                        <li><a href="index.html" class="hover:text-brand-primary transition-colors">Home</a></li>
+                        <li><a href="plan.html" class="hover:text-brand-primary transition-colors">Plan Your Trip</a></li>
+                        <li><a href="destinations.html" class="hover:text-brand-primary transition-colors">Destinations</a></li>
+                        <li><a href="gear-hub.html" class="hover:text-brand-primary transition-colors">Gear Hub</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="text-white font-bold uppercase tracking-wider text-sm mb-6">Top Regions</h4>
+                    <ul class="space-y-3 text-sm">
+                        <li><a href="#" class="hover:text-brand-primary transition-colors">Maharashtra Treks</a></li>
+                        <li><a href="#" class="hover:text-brand-primary transition-colors">Southeast Asia</a></li>
+                        <li><a href="#" class="hover:text-brand-primary transition-colors">Western Europe</a></li>
+                        <li><a href="#" class="hover:text-brand-primary transition-colors">The Balkans</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="text-white font-bold uppercase tracking-wider text-sm mb-6">Info</h4>
+                    <ul class="space-y-3 text-sm">
+                        <li><a href="#" class="hover:text-brand-primary transition-colors">About SSSuniverse</a></li>
+                        <li><a href="#" class="hover:text-brand-primary transition-colors">Contact</a></li>
+                        <li><a href="#" class="hover:text-brand-primary transition-colors">Privacy Policy</a></li>
+                        <li><a href="#" class="hover:text-brand-primary transition-colors">Terms of Service</a></li>
+                    </ul>
+                </div>
+
+            </div>
+            
+            <div class="pt-8 border-t border-gray-800 text-sm text-center text-gray-500">
+                &copy; <script>document.write(new Date().getFullYear())</script> SSSuniverse. All rights reserved. Designed for adventure.
+            </div>
+        </div>
     </footer>
 
 </body>
