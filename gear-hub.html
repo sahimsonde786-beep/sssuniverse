@@ -36,12 +36,15 @@
 
     <nav class="bg-white shadow-sm sticky top-0 z-50 border-b border-gray-100">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-between items-center h-20">
-                <div class="flex-shrink-0 flex items-center cursor-pointer">
+            <div class="flex items-center h-20">
+                
+                <!-- Logo (Left side) -->
+                <div class="flex-shrink-0 flex items-center cursor-pointer lg:w-1/4">
                     <a href="index.html" class="font-serif text-3xl font-bold text-brand-dark tracking-tight">SSS<span class="text-brand-primary">universe</span></a>
                 </div>
                 
-                <div class="hidden lg:flex space-x-8 items-center">
+                <!-- Desktop Menu (Perfectly Centered) -->
+                <div class="hidden lg:flex justify-center space-x-8 items-center lg:w-1/2">
                     <a href="index.html" class="text-sm font-medium text-gray-600 hover:text-brand-primary transition-colors uppercase tracking-wide">Home</a>
                     <a href="plan.html" class="text-sm font-medium text-gray-600 hover:text-brand-primary transition-colors uppercase tracking-wide">Plan</a>
                     <a href="destinations.html" class="text-sm font-medium text-gray-600 hover:text-brand-primary transition-colors uppercase tracking-wide">Destinations</a>
@@ -51,11 +54,39 @@
                     <a href="blogs.html" class="text-sm font-medium text-gray-600 hover:text-brand-primary transition-colors uppercase tracking-wide">Blogs</a>
                 </div>
 
-                <div class="lg:hidden flex items-center">
-                    <button class="text-gray-600 hover:text-brand-dark focus:outline-none">
-                        <i class="fa-solid fa-bars text-2xl"></i>
+                <!-- Hamburger Button (Pushed to the right) -->
+                <div class="flex items-center justify-end ml-auto lg:ml-0 lg:w-1/4">
+                    <button id="mobile-menu-button" class="lg:hidden text-gray-600 hover:text-brand-dark focus:outline-none">
+                        <i id="hamburger-icon" class="fa-solid fa-bars text-2xl transition-transform duration-300"></i>
                     </button>
                 </div>
+                
+            </div>
+        </div>
+
+        <!-- Mobile Menu Backdrop (Darkens the background) -->
+        <div id="mobile-menu-backdrop" class="fixed inset-0 bg-black/60 z-40 hidden lg:hidden backdrop-blur-sm transition-opacity"></div>
+
+        <!-- Mobile Menu Side Drawer (Slides from the right) -->
+        <div id="mobile-menu" class="fixed top-0 right-0 h-full w-64 bg-white shadow-2xl z-50 transform translate-x-full transition-transform duration-300 ease-in-out lg:hidden flex flex-col">
+            
+            <!-- Drawer Header with Close Button -->
+            <div class="flex justify-between items-center h-20 px-6 border-b border-gray-100">
+                <span class="font-serif text-xl font-bold text-brand-dark">SSS<span class="text-brand-primary">universe</span></span>
+                <button id="close-menu-button" class="text-gray-400 hover:text-brand-primary focus:outline-none transition-colors">
+                    <i class="fa-solid fa-xmark text-2xl"></i>
+                </button>
+            </div>
+
+            <!-- Drawer Links -->
+            <div class="px-4 py-6 space-y-2 flex flex-col overflow-y-auto">
+                <a href="index.html" class="block px-4 py-3 text-base font-medium text-gray-800 hover:text-brand-primary hover:bg-brand-light rounded-md transition-colors">Home</a>
+                <a href="plan.html" class="block px-4 py-3 text-base font-medium text-gray-800 hover:text-brand-primary hover:bg-brand-light rounded-md transition-colors">Plan</a>
+                <a href="destinations.html" class="block px-4 py-3 text-base font-medium text-gray-800 hover:text-brand-primary hover:bg-brand-light rounded-md transition-colors">Destinations</a>
+                <a href="gear-hub.html" class="block px-4 py-3 text-base font-medium text-brand-primary bg-brand-light rounded-md transition-colors">Gear Hub</a>
+                <a href="about.html" class="block px-4 py-3 text-base font-medium text-gray-800 hover:text-brand-primary hover:bg-brand-light rounded-md transition-colors">About</a>
+                <a href="contact.html" class="block px-4 py-3 text-base font-medium text-gray-800 hover:text-brand-primary hover:bg-brand-light rounded-md transition-colors">Contact</a>
+                <a href="blogs.html" class="block px-4 py-3 text-base font-medium text-gray-800 hover:text-brand-primary hover:bg-brand-light rounded-md transition-colors">Blogs</a>
             </div>
         </div>
     </nav>
@@ -181,6 +212,36 @@
             </div>
         </div>
     </footer>
+    <script>
+            document.addEventListener("DOMContentLoaded", function() {
+                const mobileMenuButton = document.getElementById('mobile-menu-button'); // Hamburger icon
+                const closeMenuButton = document.getElementById('close-menu-button'); // X icon inside drawer
+                const mobileMenu = document.getElementById('mobile-menu');
+                const backdrop = document.getElementById('mobile-menu-backdrop');
 
+                // Function to open the drawer
+                function openMenu() {
+                    mobileMenu.classList.remove('translate-x-full');
+                    mobileMenu.classList.add('translate-x-0');
+                    backdrop.classList.remove('hidden');
+                    document.body.style.overflow = 'hidden'; // Prevents background scrolling
+                }
+
+                // Function to close the drawer
+                function closeMenu() {
+                    mobileMenu.classList.remove('translate-x-0');
+                    mobileMenu.classList.add('translate-x-full');
+                    backdrop.classList.add('hidden');
+                    document.body.style.overflow = ''; // Restores scrolling
+                }
+
+                // Click Events
+                mobileMenuButton.addEventListener('click', openMenu);
+                closeMenuButton.addEventListener('click', closeMenu);
+                
+                // Clicking the dark background also closes the menu
+                backdrop.addEventListener('click', closeMenu); 
+            });
+        </script>
 </body>
 </html>

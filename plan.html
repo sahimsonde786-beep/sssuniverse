@@ -41,12 +41,15 @@
 
     <nav class="bg-white shadow-sm sticky top-0 z-50 border-b border-gray-100">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-between items-center h-20">
-                <div class="flex-shrink-0 flex items-center cursor-pointer">
+            <div class="flex items-center h-20">
+                
+                <!-- Logo (Left side) -->
+                <div class="flex-shrink-0 flex items-center cursor-pointer lg:w-1/4">
                     <a href="index.html" class="font-serif text-3xl font-bold text-brand-dark tracking-tight">SSS<span class="text-brand-primary">universe</span></a>
                 </div>
                 
-                <div class="hidden lg:flex space-x-8 items-center">
+                <!-- Desktop Menu (Perfectly Centered) -->
+                <div class="hidden lg:flex justify-center space-x-8 items-center lg:w-1/2">
                     <a href="index.html" class="text-sm font-medium text-gray-600 hover:text-brand-primary transition-colors uppercase tracking-wide">Home</a>
                     <a href="plan.html" class="text-sm font-semibold text-brand-primary border-b-2 border-brand-primary pb-1 uppercase tracking-wide">Plan</a>
                     <a href="destinations.html" class="text-sm font-medium text-gray-600 hover:text-brand-primary transition-colors uppercase tracking-wide">Destinations</a>
@@ -56,11 +59,39 @@
                     <a href="blogs.html" class="text-sm font-medium text-gray-600 hover:text-brand-primary transition-colors uppercase tracking-wide">Blogs</a>
                 </div>
 
-                <div class="lg:hidden flex items-center">
-                    <button class="text-gray-600 hover:text-brand-dark focus:outline-none">
-                        <i class="fa-solid fa-bars text-2xl"></i>
+                <!-- Hamburger Button (Pushed to the right) -->
+                <div class="flex items-center justify-end ml-auto lg:ml-0 lg:w-1/4">
+                    <button id="mobile-menu-button" class="lg:hidden text-gray-600 hover:text-brand-dark focus:outline-none">
+                        <i id="hamburger-icon" class="fa-solid fa-bars text-2xl transition-transform duration-300"></i>
                     </button>
                 </div>
+                
+            </div>
+        </div>
+
+        <!-- Mobile Menu Backdrop (Darkens the background) -->
+        <div id="mobile-menu-backdrop" class="fixed inset-0 bg-black/60 z-40 hidden lg:hidden backdrop-blur-sm transition-opacity"></div>
+
+        <!-- Mobile Menu Side Drawer (Slides from the right) -->
+        <div id="mobile-menu" class="fixed top-0 right-0 h-full w-64 bg-white shadow-2xl z-50 transform translate-x-full transition-transform duration-300 ease-in-out lg:hidden flex flex-col">
+            
+            <!-- Drawer Header with Close Button -->
+            <div class="flex justify-between items-center h-20 px-6 border-b border-gray-100">
+                <span class="font-serif text-xl font-bold text-brand-dark">SSS<span class="text-brand-primary">universe</span></span>
+                <button id="close-menu-button" class="text-gray-400 hover:text-brand-primary focus:outline-none transition-colors">
+                    <i class="fa-solid fa-xmark text-2xl"></i>
+                </button>
+            </div>
+
+            <!-- Drawer Links -->
+            <div class="px-4 py-6 space-y-2 flex flex-col overflow-y-auto">
+                <a href="index.html" class="block px-4 py-3 text-base font-medium text-gray-800 hover:text-brand-primary hover:bg-brand-light rounded-md transition-colors">Home</a>
+                <a href="plan.html" class="block px-4 py-3 text-base font-medium text-brand-primary bg-brand-light rounded-md transition-colors">Plan</a>
+                <a href="destinations.html" class="block px-4 py-3 text-base font-medium text-gray-800 hover:text-brand-primary hover:bg-brand-light rounded-md transition-colors">Destinations</a>
+                <a href="gear-hub.html" class="block px-4 py-3 text-base font-medium text-gray-800 hover:text-brand-primary hover:bg-brand-light rounded-md transition-colors">Gear Hub</a>
+                <a href="about.html" class="block px-4 py-3 text-base font-medium text-gray-800 hover:text-brand-primary hover:bg-brand-light rounded-md transition-colors">About</a>
+                <a href="contact.html" class="block px-4 py-3 text-base font-medium text-gray-800 hover:text-brand-primary hover:bg-brand-light rounded-md transition-colors">Contact</a>
+                <a href="blogs.html" class="block px-4 py-3 text-base font-medium text-gray-800 hover:text-brand-primary hover:bg-brand-light rounded-md transition-colors">Blogs</a>
             </div>
         </div>
     </nav>
@@ -68,7 +99,7 @@
     <div class="relative bg-brand-dark h-[400px] flex items-center justify-center overflow-hidden">
         <div class="absolute inset-0 z-0">
             <!-- Using the road/walking image to symbolize the journey and planning -->
-            <img src="IMG20251102181718.jpg" alt="Two friends walking on a trail" class="w-full h-full object-cover opacity-60 object-center" onerror="this.src='https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?auto=format&fit=crop&w=1920&q=80'">
+            <img src="C:\Users\sahim\OneDrive\Desktop\SSSUniverse\images\pexels-lara-jameson-8828439.jpg" alt="Two friends walking on a trail" class="w-full h-full object-cover opacity-60 object-center" onerror="this.src='https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?auto=format&fit=crop&w=1920&q=80'">
             <div class="absolute inset-0 bg-gradient-to-t from-brand-dark via-transparent to-transparent"></div>
         </div>
         
@@ -120,7 +151,7 @@
                 
                 <!-- Topic 1: Itineraries -->
                 <a href="#" class="group hover-zoom relative h-80 rounded-sm overflow-hidden bg-gray-900 block cursor-pointer col-span-1 md:col-span-2">
-                    <img src="IMG20260624090505.jpg" alt="Vast valley view" class="w-full h-full object-cover opacity-60 group-hover:opacity-40 transition-opacity">
+                    <img src="C:\Users\sahim\OneDrive\Desktop\SSSUniverse\images\pexels-lara-jameson-8828439.jpg" alt="Vast valley view" class="w-full h-full object-cover opacity-60 group-hover:opacity-40 transition-opacity">
                     <div class="absolute inset-0 p-8 flex flex-col justify-end">
                         <div class="bg-brand-primary w-12 h-12 rounded-full flex items-center justify-center mb-4 transform translate-y-4 opacity-0 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-300">
                             <i class="fa-solid fa-arrow-right text-white"></i>
@@ -142,7 +173,7 @@
 
                 <!-- Topic 3: Solo Travel -->
                 <a href="#" class="group hover-zoom relative h-64 rounded-sm overflow-hidden bg-gray-900 block cursor-pointer">
-                    <img src="IMG20260629092347.jpg" alt="Solo trekker" class="w-full h-full object-cover opacity-70 group-hover:opacity-50 transition-opacity">
+                    <img src="C:\Users\sahim\OneDrive\Desktop\SSSUniverse\images\edgar-chaparro-7HDi-EkG11I-unsplash.jpg" alt="Solo trekker" class="w-full h-full object-cover opacity-70 group-hover:opacity-50 transition-opacity">
                     <div class="absolute inset-0 p-6 flex flex-col justify-end bg-gradient-to-t from-black/90 to-transparent">
                         <h3 class="text-xl font-bold text-white uppercase tracking-tight mb-1">Solo Travel Guide</h3>
                         <p class="text-gray-300 text-sm">Overcoming fear and making friends abroad.</p>
@@ -151,7 +182,7 @@
 
                 <!-- Topic 4: Life on the Road -->
                 <a href="#" class="group hover-zoom relative h-64 rounded-sm overflow-hidden bg-gray-900 block cursor-pointer">
-                    <img src="IMG20251003074410.jpg" alt="Group of friends on a hill" class="w-full h-full object-cover opacity-70 group-hover:opacity-50 transition-opacity">
+                    <img src="C:\Users\sahim\OneDrive\Desktop\SSSUniverse\images\pexels-piotr-arnoldes-7862031-6109637.jpg" alt="Group of friends on a hill" class="w-full h-full object-cover opacity-70 group-hover:opacity-50 transition-opacity">
                     <div class="absolute inset-0 p-6 flex flex-col justify-end bg-gradient-to-t from-black/90 to-transparent">
                         <h3 class="text-xl font-bold text-white uppercase tracking-tight mb-1">Life on the Road</h3>
                         <p class="text-gray-300 text-sm">Digital nomad tips, staying healthy, and slow travel.</p>
@@ -184,7 +215,7 @@
                 <!-- Article 1 -->
                 <article class="flex flex-col sm:flex-row gap-6 group cursor-pointer">
                     <div class="sm:w-2/5 h-48 flex-shrink-0 hover-zoom overflow-hidden rounded-sm bg-gray-100">
-                        <img src="IMG20260624090104.jpg" alt="Trekkers" class="w-full h-full object-cover">
+                        <img src="C:\Users\sahim\OneDrive\Desktop\SSSUniverse\images\zoshua-colah-TzMGehZmocI-unsplash.jpg" alt="Hostel room" class="w-full h-full object-cover">
                     </div>
                     <div class="sm:w-3/5 flex flex-col justify-center">
                         <span class="text-[10px] font-bold text-brand-primary uppercase tracking-widest mb-2">Life on the Road</span>
@@ -197,7 +228,7 @@
                 <!-- Article 2 -->
                 <article class="flex flex-col sm:flex-row gap-6 group cursor-pointer">
                     <div class="sm:w-2/5 h-48 flex-shrink-0 hover-zoom overflow-hidden rounded-sm bg-gray-100">
-                        <img src="https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=800&q=80" alt="Planning map" class="w-full h-full object-cover">
+                        <img src="C:\Users\sahim\OneDrive\Desktop\SSSUniverse\images\jakub-zerdzicki-zoubZIvKa7M-unsplash.jpg" alt="Money on the table" class="w-full h-full object-cover">
                     </div>
                     <div class="sm:w-3/5 flex flex-col justify-center">
                         <span class="text-[10px] font-bold text-brand-primary uppercase tracking-widest mb-2">Budgeting</span>
@@ -210,7 +241,7 @@
                 <!-- Article 3 -->
                 <article class="flex flex-col sm:flex-row gap-6 group cursor-pointer">
                     <div class="sm:w-2/5 h-48 flex-shrink-0 hover-zoom overflow-hidden rounded-sm bg-gray-100">
-                        <img src="IMG20260629095114.jpg" alt="Trekking gear" class="w-full h-full object-cover">
+                        <img src="C:\Users\sahim\OneDrive\Desktop\SSSUniverse\images\alice-donovan-rouse-z9F_yK4Nmf8-unsplash.jpg" alt="Trekking gear" class="w-full h-full object-cover">
                     </div>
                     <div class="sm:w-3/5 flex flex-col justify-center">
                         <span class="text-[10px] font-bold text-brand-primary uppercase tracking-widest mb-2">Preparation</span>
@@ -302,6 +333,36 @@
             </div>
         </div>
     </footer>
-    
+        <script>
+            document.addEventListener("DOMContentLoaded", function() {
+                const mobileMenuButton = document.getElementById('mobile-menu-button'); // Hamburger icon
+                const closeMenuButton = document.getElementById('close-menu-button'); // X icon inside drawer
+                const mobileMenu = document.getElementById('mobile-menu');
+                const backdrop = document.getElementById('mobile-menu-backdrop');
+
+                // Function to open the drawer
+                function openMenu() {
+                    mobileMenu.classList.remove('translate-x-full');
+                    mobileMenu.classList.add('translate-x-0');
+                    backdrop.classList.remove('hidden');
+                    document.body.style.overflow = 'hidden'; // Prevents background scrolling
+                }
+
+                // Function to close the drawer
+                function closeMenu() {
+                    mobileMenu.classList.remove('translate-x-0');
+                    mobileMenu.classList.add('translate-x-full');
+                    backdrop.classList.add('hidden');
+                    document.body.style.overflow = ''; // Restores scrolling
+                }
+
+                // Click Events
+                mobileMenuButton.addEventListener('click', openMenu);
+                closeMenuButton.addEventListener('click', closeMenu);
+                
+                // Clicking the dark background also closes the menu
+                backdrop.addEventListener('click', closeMenu); 
+            });
+        </script>
 </body>
 </html>
