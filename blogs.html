@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel Blogs & Guides | SSSuniverse</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,700;1,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        serif: ['Playfair Display', 'serif'],
+                    },
+                    colors: {
+                        brand: {
+                            primary: '#0369a1',
+                            dark: '#111827',
+                            light: '#f8fafc',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        .hover-zoom img { transition: transform 0.6s ease; }
+        .hover-zoom:hover img { transform: scale(1.05); }
+        .line-clamp-3 {
+            display: -webkit-box;
+            -webkit-line-clamp: 3;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+    </style>
+</head>
+<body class="bg-brand-light text-gray-800">
+    <nav class="bg-white shadow-sm sticky top-0 z-50 border-b border-gray-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <div class="flex-shrink-0 flex items-center cursor-pointer">
+                    <a href="index.html" class="font-serif text-3xl font-bold text-brand-dark tracking-tight">SSS<span class="text-brand-primary">universe</span></a>
+                </div>
+                
+                <div class="hidden lg:flex space-x-8 items-center">
+                    <a href="index.html" class="text-sm font-medium text-gray-600 hover:text-brand-primary transition-colors uppercase tracking-wide">Home</a>
+                    <a href="plan.html" class="text-sm font-medium text-gray-600 hover:text-brand-primary transition-colors uppercase tracking-wide">Plan</a>
+                    <a href="destinations.html" class="text-sm font-medium text-gray-600 hover:text-brand-primary transition-colors uppercase tracking-wide">Destinations</a>
+                    <a href="gear-hub.html" class="text-sm font-medium text-gray-600 hover:text-brand-primary transition-colors uppercase tracking-wide">Gear Hub</a>
+                    <a href="about.html" class="text-sm font-medium text-gray-600 hover:text-brand-primary transition-colors uppercase tracking-wide">About</a>
+                    <a href="contact.html" class="text-sm font-medium text-gray-600 hover:text-brand-primary transition-colors uppercase tracking-wide">Contact</a>
+                    <a href="blogs.html" class="text-sm font-semibold text-brand-primary border-b-2 border-brand-primary pb-1 uppercase tracking-wide">Blogs</a>
+                </div>
+
+                <div class="lg:hidden flex items-center">
+                    <button class="text-gray-600 hover:text-brand-dark focus:outline-none">
+                        <i class="fa-solid fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <header class="bg-brand-dark text-white py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h1 class="font-serif text-4xl md:text-5xl font-bold mb-4">Travel Stories & Guides</h1>
+            <p class="text-gray-400 max-w-2xl mx-auto text-lg">Expert advice, destination guides, and creative tips for your next big adventure.</p>
+        </div>
+    </header>
+
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+        
+        <div class="mb-12">
+            <article class="bg-white rounded-xl shadow-sm overflow-hidden hover:shadow-lg transition-shadow duration-300 flex flex-col md:flex-row h-auto md:h-96 hover-zoom cursor-pointer border border-gray-100">
+                <div class="w-full md:w-1/2 overflow-hidden h-64 md:h-full">
+                    <img src="https://images.unsplash.com/photo-1436491865332-7a61a109cc05?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" alt="Airplane flying" class="w-full h-full object-cover">
+                </div>
+                <div class="w-full md:w-1/2 p-8 md:p-12 flex flex-col justify-center">
+                    <span class="text-brand-primary text-sm font-bold uppercase tracking-wider mb-2">Beginner's Guide</span>
+                    <h2 class="font-serif text-3xl font-bold text-gray-900 mb-4 hover:text-brand-primary transition-colors">How to Travel Abroad for the First Time</h2>
+                    <p class="text-gray-600 mb-6 leading-relaxed">Stepping out of your home country for the first time can be daunting. From managing visas and passports to navigating cultural differences, here is the ultimate step-by-step guide to international travel.</p>
+                    <div class="flex items-center justify-between mt-auto">
+                        <span class="text-sm text-gray-500"><i class="fa-regular fa-calendar mr-2"></i> Oct 12, 2025</span>
+                        <a href="#" class="text-brand-primary font-semibold hover:text-brand-dark transition-colors">Read Article &rarr;</a>
+                    </div>
+                </div>
+            </article>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            
+            <article class="bg-white rounded-xl shadow-sm overflow-hidden hover:shadow-lg transition-shadow duration-300 flex flex-col hover-zoom cursor-pointer border border-gray-100">
+                <div class="h-56 overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1519689680058-324335c77eba?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Couple traveling" class="w-full h-full object-cover">
+                </div>
+                <div class="p-6 flex flex-col flex-grow">
+                    <span class="text-brand-primary text-xs font-bold uppercase tracking-wider mb-2">Couples Travel</span>
+                    <h3 class="font-serif text-xl font-bold text-gray-900 mb-3 hover:text-brand-primary transition-colors">How to Travel as a Couple Around the World</h3>
+                    <p class="text-gray-600 text-sm mb-4 flex-grow line-clamp-3">Traveling with your significant other is the ultimate relationship test. Discover how to balance itineraries, manage budgets, and maintain harmony while exploring the globe together.</p>
+                    <div class="flex items-center justify-between border-t border-gray-100 pt-4 mt-auto">
+                        <span class="text-xs text-gray-500">Oct 05, 2025</span>
+                        <a href="#" class="text-sm text-brand-primary font-semibold">Read More</a>
+                    </div>
+                </div>
+            </article>
+
+            <article class="bg-white rounded-xl shadow-sm overflow-hidden hover:shadow-lg transition-shadow duration-300 flex flex-col hover-zoom cursor-pointer border border-gray-100">
+                <div class="h-56 overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1544816155-12df9643f363?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Baby in airport" class="w-full h-full object-cover">
+                </div>
+                <div class="p-6 flex flex-col flex-grow">
+                    <span class="text-brand-primary text-xs font-bold uppercase tracking-wider mb-2">Family Travel</span>
+                    <h3 class="font-serif text-xl font-bold text-gray-900 mb-3 hover:text-brand-primary transition-colors">25 Survival Tips for Flying with a Baby</h3>
+                    <p class="text-gray-600 text-sm mb-4 flex-grow line-clamp-3">Navigating airports, dealing with ear pressure, and surviving long-haul flights with an infant doesn't have to be a nightmare. Here are 25 tried-and-tested tips for stress-free family flights.</p>
+                    <div class="flex items-center justify-between border-t border-gray-100 pt-4 mt-auto">
+                        <span class="text-xs text-gray-500">Sep 28, 2025</span>
+                        <a href="#" class="text-sm text-brand-primary font-semibold">Read More</a>
+                    </div>
+                </div>
+            </article>
+
+            <article class="bg-white rounded-xl shadow-sm overflow-hidden hover:shadow-lg transition-shadow duration-300 flex flex-col hover-zoom cursor-pointer border border-gray-100">
+                <div class="h-56 overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1565552643983-c5dc3bf6c1b3?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Mecca Umrah" class="w-full h-full object-cover">
+                </div>
+                <div class="p-6 flex flex-col flex-grow">
+                    <span class="text-brand-primary text-xs font-bold uppercase tracking-wider mb-2">Spiritual</span>
+                    <h3 class="font-serif text-xl font-bold text-gray-900 mb-3 hover:text-brand-primary transition-colors">How to Perform Umrah with Family: A Complete Guide</h3>
+                    <p class="text-gray-600 text-sm mb-4 flex-grow line-clamp-3">Planning a spiritual journey to Mecca with your loved ones? From visa procedures and booking accommodations near the Haram to managing crowds with children, we break down everything you need to know.</p>
+                    <div class="flex items-center justify-between border-t border-gray-100 pt-4 mt-auto">
+                        <span class="text-xs text-gray-500">Sep 15, 2025</span>
+                        <a href="#" class="text-sm text-brand-primary font-semibold">Read More</a>
+                    </div>
+                </div>
+            </article>
+
+            <article class="bg-white rounded-xl shadow-sm overflow-hidden hover:shadow-lg transition-shadow duration-300 flex flex-col hover-zoom cursor-pointer border border-gray-100">
+                <div class="h-56 overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1473186578172-c141e6798f2c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Senior couple traveling" class="w-full h-full object-cover">
+                </div>
+                <div class="p-6 flex flex-col flex-grow">
+                    <span class="text-brand-primary text-xs font-bold uppercase tracking-wider mb-2">Preparation</span>
+                    <h3 class="font-serif text-xl font-bold text-gray-900 mb-3 hover:text-brand-primary transition-colors">Best Travel Insurance Companies for Seniors</h3>
+                    <p class="text-gray-600 text-sm mb-4 flex-grow line-clamp-3">Age shouldn't limit your adventures, but it does require better preparation. We review and rank the top travel insurance policies that offer comprehensive medical coverage for senior travelers.</p>
+                    <div class="flex items-center justify-between border-t border-gray-100 pt-4 mt-auto">
+                        <span class="text-xs text-gray-500">Sep 02, 2025</span>
+                        <a href="#" class="text-sm text-brand-primary font-semibold">Read More</a>
+                    </div>
+                </div>
+            </article>
+
+            <article class="bg-white rounded-xl shadow-sm overflow-hidden hover:shadow-lg transition-shadow duration-300 flex flex-col hover-zoom cursor-pointer border border-gray-100">
+                <div class="h-56 overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1598092770284-cd97dcaf83bc?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Kashmir Valley Winter" class="w-full h-full object-cover">
+                </div>
+                <div class="p-6 flex flex-col flex-grow">
+                    <span class="text-brand-primary text-xs font-bold uppercase tracking-wider mb-2">Itinerary</span>
+                    <h3 class="font-serif text-xl font-bold text-gray-900 mb-3 hover:text-brand-primary transition-colors">The Ultimate 7-Day Kashmir Winter Itinerary for Couples</h3>
+                    <p class="text-gray-600 text-sm mb-4 flex-grow line-clamp-3">Planning a romantic January getaway? Discover the magic of snow-capped mountains, Shikara rides on Dal Lake, and the best cozy resorts for a perfect week-long couples trip to Kashmir.</p>
+                    <div class="flex items-center justify-between border-t border-gray-100 pt-4 mt-auto">
+                        <span class="text-xs text-gray-500">Aug 20, 2025</span>
+                        <a href="#" class="text-sm text-brand-primary font-semibold">Read More</a>
+                    </div>
+                </div>
+            </article>
+
+            <article class="bg-white rounded-xl shadow-sm overflow-hidden hover:shadow-lg transition-shadow duration-300 flex flex-col hover-zoom cursor-pointer border border-gray-100">
+                <div class="h-56 overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Laptop on travel desk" class="w-full h-full object-cover">
+                </div>
+                <div class="p-6 flex flex-col flex-grow">
+                    <span class="text-brand-primary text-xs font-bold uppercase tracking-wider mb-2">Digital Nomad</span>
+                    <h3 class="font-serif text-xl font-bold text-gray-900 mb-3 hover:text-brand-primary transition-colors">Freelancing on the Road: A Graphic Designer's Guide</h3>
+                    <p class="text-gray-600 text-sm mb-4 flex-grow line-clamp-3">How to manage client deadlines on Fiverr, handle massive design files over spotty hostel Wi-Fi, and build an incredible motion graphics portfolio while traveling the world.</p>
+                    <div class="flex items-center justify-between border-t border-gray-100 pt-4 mt-auto">
+                        <span class="text-xs text-gray-500">Aug 11, 2025</span>
+                        <a href="#" class="text-sm text-brand-primary font-semibold">Read More</a>
+                    </div>
+                </div>
+            </article>
+
+            <article class="bg-white rounded-xl shadow-sm overflow-hidden hover:shadow-lg transition-shadow duration-300 flex flex-col hover-zoom cursor-pointer border border-gray-100">
+                <div class="h-56 overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1516035069371-29a1b244cc32?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Camera lens" class="w-full h-full object-cover">
+                </div>
+                <div class="p-6 flex flex-col flex-grow">
+                    <span class="text-brand-primary text-xs font-bold uppercase tracking-wider mb-2">Creator Hub</span>
+                    <h3 class="font-serif text-xl font-bold text-gray-900 mb-3 hover:text-brand-primary transition-colors">Mastering Cinematic Travel Videos for YouTube</h3>
+                    <p class="text-gray-600 text-sm mb-4 flex-grow line-clamp-3">Elevate your travel channel. Learn how to script short travel documentaries, utilize speed ramping, master color grading, and optimize your SEO tags to grow your audience.</p>
+                    <div class="flex items-center justify-between border-t border-gray-100 pt-4 mt-auto">
+                        <span class="text-xs text-gray-500">Jul 30, 2025</span>
+                        <a href="#" class="text-sm text-brand-primary font-semibold">Read More</a>
+                    </div>
+                </div>
+            </article>
+
+            <article class="bg-white rounded-xl shadow-sm overflow-hidden hover:shadow-lg transition-shadow duration-300 flex flex-col hover-zoom cursor-pointer border border-gray-100">
+                <div class="h-56 overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1522204523234-8729aa6e3d5f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="E-commerce shopping tech" class="w-full h-full object-cover">
+                </div>
+                <div class="p-6 flex flex-col flex-grow">
+                    <span class="text-brand-primary text-xs font-bold uppercase tracking-wider mb-2">Tech Reviews</span>
+                    <h3 class="font-serif text-xl font-bold text-gray-900 mb-3 hover:text-brand-primary transition-colors">Starting a Product Review Channel: Travel Gadgets Edition</h3>
+                    <p class="text-gray-600 text-sm mb-4 flex-grow line-clamp-3">Want to review tech? Here is a roadmap to curating the best power banks, travel adapters, and camera accessories from Amazon and Flipkart to feature on your new review channel.</p>
+                    <div class="flex items-center justify-between border-t border-gray-100 pt-4 mt-auto">
+                        <span class="text-xs text-gray-500">Jul 18, 2025</span>
+                        <a href="#" class="text-sm text-brand-primary font-semibold">Read More</a>
+                    </div>
+                </div>
+            </article>
+
+            <article class="bg-white rounded-xl shadow-sm overflow-hidden hover:shadow-lg transition-shadow duration-300 flex flex-col hover-zoom cursor-pointer border border-gray-100">
+                <div class="h-56 overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Travel map" class="w-full h-full object-cover">
+                </div>
+                <div class="p-6 flex flex-col flex-grow">
+                    <span class="text-brand-primary text-xs font-bold uppercase tracking-wider mb-2">Hacks</span>
+                    <h3 class="font-serif text-xl font-bold text-gray-900 mb-3 hover:text-brand-primary transition-colors">10 Travel Hacks You Never Knew You Needed</h3>
+                    <p class="text-gray-600 text-sm mb-4 flex-grow line-clamp-3">From rolling clothes to save suitcase space to using incognito mode for cheaper flights, these 10 industry secrets will completely change the way you prepare for your next vacation.</p>
+                    <div class="flex items-center justify-between border-t border-gray-100 pt-4 mt-auto">
+                        <span class="text-xs text-gray-500">Jul 02, 2025</span>
+                        <a href="#" class="text-sm text-brand-primary font-semibold">Read More</a>
+                    </div>
+                </div>
+            </article>
+
+        </div>
+        
+        <div class="mt-16 flex justify-center space-x-2">
+            <button class="w-10 h-10 rounded-md border border-gray-300 flex items-center justify-center text-gray-500 hover:border-brand-primary hover:text-brand-primary transition-colors disabled:opacity-50"><i class="fa-solid fa-chevron-left"></i></button>
+            <button class="w-10 h-10 rounded-md bg-brand-primary text-white flex items-center justify-center font-medium">1</button>
+            <button class="w-10 h-10 rounded-md border border-gray-300 flex items-center justify-center text-gray-600 hover:border-brand-primary hover:text-brand-primary transition-colors font-medium">2</button>
+            <button class="w-10 h-10 rounded-md border border-gray-300 flex items-center justify-center text-gray-600 hover:border-brand-primary hover:text-brand-primary transition-colors font-medium">3</button>
+            <button class="w-10 h-10 rounded-md border border-gray-300 flex items-center justify-center text-gray-500 hover:border-brand-primary hover:text-brand-primary transition-colors"><i class="fa-solid fa-chevron-right"></i></button>
+        </div>
+    </main>
+
+    <footer class="bg-brand-dark text-gray-300 pt-16 pb-8">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
+                
+                <div>
+                    <h4 class="font-serif text-2xl font-bold text-white tracking-tight mb-6">SSS<span class="text-brand-primary">universe</span></h4>
+                    <p class="text-sm text-gray-400 mb-6 leading-relaxed">Helping you travel smarter, trek harder, and explore the world with practical guides and honest gear reviews.</p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="w-8 h-8 rounded-full bg-gray-800 flex items-center justify-center hover:bg-brand-primary hover:text-white transition-colors"><i class="fa-brands fa-instagram text-sm"></i></a>
+                        <a href="#" class="w-8 h-8 rounded-full bg-gray-800 flex items-center justify-center hover:bg-brand-primary hover:text-white transition-colors"><i class="fa-brands fa-youtube text-sm"></i></a>
+                        <a href="#" class="w-8 h-8 rounded-full bg-gray-800 flex items-center justify-center hover:bg-brand-primary hover:text-white transition-colors"><i class="fa-brands fa-twitter text-sm"></i></a>
+                    </div>
+                </div>
+
+                <div>
+                    <h4 class="text-white font-bold uppercase tracking-wider text-sm mb-6">Explore</h4>
+                    <ul class="space-y-3 text-sm">
+                        <li><a href="index.html" class="hover:text-brand-primary transition-colors">Home</a></li>
+                        <li><a href="plan.html" class="hover:text-brand-primary transition-colors">Plan Your Trip</a></li>
+                        <li><a href="destinations.html" class="hover:text-brand-primary transition-colors">Destinations</a></li>
+                        <li><a href="gear-hub.html" class="hover:text-brand-primary transition-colors">Gear Hub</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="text-white font-bold uppercase tracking-wider text-sm mb-6">Top Regions</h4>
+                    <ul class="space-y-3 text-sm">
+                        <li><a href="#" class="hover:text-brand-primary transition-colors">Maharashtra Treks</a></li>
+                        <li><a href="#" class="hover:text-brand-primary transition-colors">Southeast Asia</a></li>
+                        <li><a href="#" class="hover:text-brand-primary transition-colors">Western Europe</a></li>
+                        <li><a href="#" class="hover:text-brand-primary transition-colors">The Balkans</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="text-white font-bold uppercase tracking-wider text-sm mb-6">Info</h4>
+                    <ul class="space-y-3 text-sm">
+                        <li><a href="about.html" class="hover:text-brand-primary transition-colors">About SSSuniverse</a></li>
+                        <li><a href="contact.html" class="hover:text-brand-primary transition-colors">Contact</a></li>
+                        <li><a href="privacy-policy.html" class="hover:text-brand-primary transition-colors">Privacy Policy</a></li>
+                        <li><a href="terms-of-service.html" class="hover:text-brand-primary transition-colors">Terms of Service</a></li>
+                    </ul>
+                </div>
+
+            </div>
+            
+            <div class="pt-8 border-t border-gray-800 text-sm text-center text-gray-500">
+                © <script>document.write(new Date().getFullYear())</script> SSSuniverse. All rights reserved. Designed for adventure.
+            </div>
+        </div>
+    </footer>
+    
+</body>
+</html>
