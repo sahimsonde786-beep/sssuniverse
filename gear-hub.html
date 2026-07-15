@@ -3,12 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gear Hub & Reviews | SSSuniverse</title>
-    
-    <!-- Load Tailwind CSS -->
+    <title>Gear Hub | SSSuniverse</title>
     <script src="https://cdn.tailwindcss.com"></script>
     
-    <!-- Load Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,700;1,700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
@@ -31,219 +28,598 @@
             }
         }
     </script>
+    <style>
+        /* Custom scrollbar for sidebar filters */
+        .custom-scrollbar::-webkit-scrollbar {
+            width: 4px;
+        }
+        .custom-scrollbar::-webkit-scrollbar-track {
+            background: #f1f1f1; 
+        }
+        .custom-scrollbar::-webkit-scrollbar-thumb {
+            background: #cbd5e1; 
+            border-radius: 4px;
+        }
+        .custom-scrollbar::-webkit-scrollbar-thumb:hover {
+            background: #94a3b8; 
+        }
+    </style>
 </head>
-<body class="bg-gray-50 font-sans text-gray-800 antialiased">
+<body class="bg-brand-light text-gray-800">
 
     <nav class="bg-white shadow-sm sticky top-0 z-50 border-b border-gray-100">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex items-center h-20">
                 
-                <!-- Logo (Left side) -->
                 <div class="flex-shrink-0 flex items-center cursor-pointer lg:w-1/4">
                     <a href="index.html" class="font-serif text-3xl font-bold text-brand-dark tracking-tight">SSS<span class="text-brand-primary">universe</span></a>
                 </div>
                 
-                <!-- Desktop Menu (Perfectly Centered) -->
                 <div class="hidden lg:flex justify-center space-x-8 items-center lg:w-1/2">
                     <a href="index.html" class="whitespace-nowrap text-sm font-medium text-gray-600 hover:text-brand-primary transition-colors uppercase tracking-wide">Home</a>
                     <a href="plan.html" class="whitespace-nowrap text-sm font-medium text-gray-600 hover:text-brand-primary transition-colors uppercase tracking-wide">Plan</a>
                     <a href="destinations.html" class="whitespace-nowrap text-sm font-medium text-gray-600 hover:text-brand-primary transition-colors uppercase tracking-wide">Destinations</a>
+                    
                     <a href="gear-hub.html" class="whitespace-nowrap text-sm font-semibold text-brand-primary border-b-2 border-brand-primary pb-1 uppercase tracking-wide">Gear Hub</a>
+                    
                     <a href="about.html" class="whitespace-nowrap text-sm font-medium text-gray-600 hover:text-brand-primary transition-colors uppercase tracking-wide">About</a>
                     <a href="contact.html" class="whitespace-nowrap text-sm font-medium text-gray-600 hover:text-brand-primary transition-colors uppercase tracking-wide">Contact</a>
                     <a href="blogs.html" class="whitespace-nowrap text-sm font-medium text-gray-600 hover:text-brand-primary transition-colors uppercase tracking-wide">Blogs</a>
                 </div>
 
-                <!-- Hamburger Button (Pushed to the right) -->
                 <div class="flex items-center justify-end ml-auto lg:ml-0 lg:w-1/4">
                     <button id="mobile-menu-button" class="lg:hidden text-gray-600 hover:text-brand-dark focus:outline-none">
                         <i id="hamburger-icon" class="fa-solid fa-bars text-2xl transition-transform duration-300"></i>
                     </button>
                 </div>
-                
             </div>
         </div>
 
-        <!-- Mobile Menu Backdrop (Darkens the background) -->
         <div id="mobile-menu-backdrop" class="fixed inset-0 bg-black/60 z-40 hidden lg:hidden backdrop-blur-sm transition-opacity"></div>
 
-        <!-- Mobile Menu Side Drawer (Slides from the right) -->
         <div id="mobile-menu" class="fixed top-0 right-0 h-full w-64 bg-white shadow-2xl z-50 transform translate-x-full transition-transform duration-300 ease-in-out lg:hidden flex flex-col">
-            
-            <!-- Drawer Header with Close Button -->
             <div class="flex justify-between items-center h-20 px-6 border-b border-gray-100">
                 <span class="font-serif text-xl font-bold text-brand-dark">SSS<span class="text-brand-primary">universe</span></span>
                 <button id="close-menu-button" class="text-gray-400 hover:text-brand-primary focus:outline-none transition-colors">
                     <i class="fa-solid fa-xmark text-2xl"></i>
                 </button>
             </div>
-
-            <!-- Drawer Links -->
             <div class="px-4 py-6 space-y-2 flex flex-col overflow-y-auto">
-                <a href="index.html" class="whitespace-nowrap block px-4 py-3 text-base font-medium text-gray-800 hover:text-brand-primary hover:bg-brand-light rounded-md transition-colors">Home</a>
-                <a href="plan.html" class="whitespace-nowrap block px-4 py-3 text-base font-medium text-gray-800 hover:text-brand-primary hover:bg-brand-light rounded-md transition-colors">Plan</a>
-                <a href="destinations.html" class="whitespace-nowrap block px-4 py-3 text-base font-medium text-gray-800 hover:text-brand-primary hover:bg-brand-light rounded-md transition-colors">Destinations</a>
-                <a href="gear-hub.html" class="whitespace-nowrap block px-4 py-3 text-base font-medium text-brand-primary bg-brand-light rounded-md transition-colors">Gear Hub</a>
-                <a href="about.html" class="whitespace-nowrap block px-4 py-3 text-base font-medium text-gray-800 hover:text-brand-primary hover:bg-brand-light rounded-md transition-colors">About</a>
-                <a href="contact.html" class="whitespace-nowrap block px-4 py-3 text-base font-medium text-gray-800 hover:text-brand-primary hover:bg-brand-light rounded-md transition-colors">Contact</a>
-                <a href="blogs.html" class="whitespace-nowrap block px-4 py-3 text-base font-medium text-gray-800 hover:text-brand-primary hover:bg-brand-light rounded-md transition-colors">Blogs</a>
+                <a href="index.html" class="block px-4 py-3 text-base font-medium text-gray-800 hover:text-brand-primary hover:bg-brand-light rounded-md transition-colors">Home</a>
+                <a href="plan.html" class="block px-4 py-3 text-base font-medium text-gray-800 hover:text-brand-primary hover:bg-brand-light rounded-md transition-colors">Plan</a>
+                <a href="destinations.html" class="block px-4 py-3 text-base font-medium text-gray-800 hover:text-brand-primary hover:bg-brand-light rounded-md transition-colors">Destinations</a>
+                <a href="gear-hub.html" class="block px-4 py-3 text-base font-medium text-brand-primary bg-brand-light rounded-md transition-colors">Gear Hub</a>
+                <a href="about.html" class="block px-4 py-3 text-base font-medium text-gray-800 hover:text-brand-primary hover:bg-brand-light rounded-md transition-colors">About</a>
+                <a href="contact.html" class="block px-4 py-3 text-base font-medium text-gray-800 hover:text-brand-primary hover:bg-brand-light rounded-md transition-colors">Contact</a>
+                <a href="blogs.html" class="block px-4 py-3 text-base font-medium text-gray-800 hover:text-brand-primary hover:bg-brand-light rounded-md transition-colors">Blogs</a>
             </div>
         </div>
     </nav>
 
-    <div class="bg-brand-dark text-white py-20 border-b-4 border-brand-primary">
-        <div class="max-w-4xl mx-auto px-4 text-center">
-            <h1 class="text-4xl md:text-5xl font-black mb-4 uppercase tracking-tight">The Gear Hub</h1>
-            <p class="text-xl text-gray-400 font-medium max-w-2xl mx-auto">Honest, field-tested reviews of the backpacks, boots, and camera gear I use on the trails of Maharashtra and around the world.</p>
+    <header class="bg-brand-dark text-white py-12">
+        <div class="max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h1 class="font-serif text-4xl font-bold mb-4">THE GEAR HUB</h1>
+            <p class="text-gray-400 max-w-2xl mx-auto text-base">Honest, field-tested reviews of the backpacks, boots, and camera gear we use on the trails and in the studio.</p>
+        </div>
+    </header>
+
+    <div class="max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8 py-10 flex flex-col lg:flex-row gap-8 font-sans">
+        
+        <aside class="w-full lg:w-64 flex-shrink-0 lg:sticky lg:top-28 h-max overflow-y-auto custom-scrollbar pr-2" style="max-height: calc(100vh - 120px);">
+            
+            <div class="mb-6">
+                <h3 class="font-bold text-gray-900 mb-3 text-xs uppercase tracking-wider">Category</h3>
+                <ul class="space-y-2.5 text-sm text-gray-600 font-medium">
+                    <li><a href="#" class="hover:text-brand-primary flex justify-between">Electronics & Cameras <span class="text-gray-400">(42)</span></a></li>
+                    <li><a href="#" class="hover:text-brand-primary flex justify-between">Trekking Backpacks <span class="text-gray-400">(18)</span></a></li>
+                    <li><a href="#" class="hover:text-brand-primary flex justify-between">Trail Footwear <span class="text-gray-400">(24)</span></a></li>
+                    <li><a href="#" class="hover:text-brand-primary flex justify-between">Camping & Tents <span class="text-gray-400">(15)</span></a></li>
+                    <li><a href="#" class="hover:text-brand-primary flex justify-between">Creator Tech & Audio <span class="text-gray-400">(31)</span></a></li>
+                </ul>
+            </div>
+
+            <div class="mb-6 border-t border-gray-200 pt-5">
+                <h3 class="font-bold text-gray-900 mb-3 text-xs uppercase tracking-wider">Delivery Day</h3>
+                <label class="flex items-center text-sm text-gray-600 cursor-pointer group">
+                    <input type="checkbox" class="rounded border-gray-300 text-brand-primary focus:ring-brand-primary mr-2 cursor-pointer">
+                    <span class="group-hover:text-brand-primary">Get it by Tomorrow</span>
+                </label>
+            </div>
+
+            <div class="mb-6 border-t border-gray-200 pt-5">
+                <h3 class="font-bold text-gray-900 mb-3 text-xs uppercase tracking-wider">Top Brands</h3>
+                <div class="space-y-2.5">
+                    <label class="flex items-center text-sm text-gray-600 cursor-pointer group"><input type="checkbox" class="rounded border-gray-300 text-brand-primary mr-2"><span class="group-hover:text-brand-primary">Sony</span></label>
+                    <label class="flex items-center text-sm text-gray-600 cursor-pointer group"><input type="checkbox" class="rounded border-gray-300 text-brand-primary mr-2"><span class="group-hover:text-brand-primary">DJI</span></label>
+                    <label class="flex items-center text-sm text-gray-600 cursor-pointer group"><input type="checkbox" class="rounded border-gray-300 text-brand-primary mr-2"><span class="group-hover:text-brand-primary">Osprey</span></label>
+                    <label class="flex items-center text-sm text-gray-600 cursor-pointer group"><input type="checkbox" class="rounded border-gray-300 text-brand-primary mr-2"><span class="group-hover:text-brand-primary">Salomon</span></label>
+                    <label class="flex items-center text-sm text-gray-600 cursor-pointer group"><input type="checkbox" class="rounded border-gray-300 text-brand-primary mr-2"><span class="group-hover:text-brand-primary">Peak Design</span></label>
+                    <label class="flex items-center text-sm text-gray-600 cursor-pointer group"><input type="checkbox" class="rounded border-gray-300 text-brand-primary mr-2"><span class="group-hover:text-brand-primary">Rode</span></label>
+                </div>
+            </div>
+
+            <div class="mb-6 border-t border-gray-200 pt-5">
+                <h3 class="font-bold text-gray-900 mb-3 text-xs uppercase tracking-wider">Customer Reviews</h3>
+                <div class="space-y-2">
+                    <a href="#" class="flex items-center text-sm text-gray-600 hover:text-brand-primary">
+                        <div class="text-yellow-400 flex space-x-0.5 text-xs mr-2">
+                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-regular fa-star"></i>
+                        </div>
+                        & Up
+                    </a>
+                    <a href="#" class="flex items-center text-sm text-gray-600 hover:text-brand-primary">
+                        <div class="text-yellow-400 flex space-x-0.5 text-xs mr-2">
+                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-regular fa-star"></i><i class="fa-regular fa-star"></i>
+                        </div>
+                        & Up
+                    </a>
+                </div>
+            </div>
+
+            <div class="mb-6 border-t border-gray-200 pt-5">
+                <h3 class="font-bold text-gray-900 mb-3 text-xs uppercase tracking-wider">Price</h3>
+                <ul class="space-y-2.5 text-sm text-gray-600">
+                    <li><a href="#" class="hover:text-brand-primary">Under ₹5,000</a></li>
+                    <li><a href="#" class="hover:text-brand-primary">₹5,000 - ₹15,000</a></li>
+                    <li><a href="#" class="hover:text-brand-primary">₹15,000 - ₹50,000</a></li>
+                    <li><a href="#" class="hover:text-brand-primary">Over ₹50,000</a></li>
+                </ul>
+            </div>
+
+            <div class="mb-6 border-t border-gray-200 pt-5">
+                <h3 class="font-bold text-gray-900 mb-3 text-xs uppercase tracking-wider">Discount</h3>
+                <ul class="space-y-2.5 text-sm text-gray-600">
+                    <li><a href="#" class="hover:text-brand-primary">10% Off or more</a></li>
+                    <li><a href="#" class="hover:text-brand-primary">25% Off or more</a></li>
+                    <li><a href="#" class="hover:text-brand-primary">50% Off or more</a></li>
+                </ul>
+            </div>
+        </aside>
+
+        <div class="flex-grow">
+            
+            <div class="bg-white p-4 rounded-lg shadow-sm border border-gray-100 flex flex-col sm:flex-row justify-between items-center mb-6">
+                <span class="text-sm text-gray-600 font-medium mb-4 sm:mb-0">Showing 1-20 of 130 Results</span>
+                <div class="flex items-center space-x-3">
+                    <span class="text-sm text-gray-500 font-medium">Sort by:</span>
+                    <select class="border border-gray-200 rounded-md px-3 py-1.5 text-sm text-gray-700 font-medium outline-none focus:border-brand-primary bg-gray-50 cursor-pointer">
+                        <option>Featured</option>
+                        <option>Price: Low to High</option>
+                        <option>Price: High to Low</option>
+                        <option>Avg. Customer Review</option>
+                        <option>Newest Arrivals</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-5">
+                
+                <div class="bg-white border border-gray-100 rounded-lg overflow-hidden hover:shadow-xl transition-shadow duration-300 group flex flex-col cursor-pointer">
+                    <div class="h-44 relative p-4 bg-white flex items-center justify-center border-b border-gray-50">
+                        <span class="absolute top-2 left-2 bg-red-500 text-white text-[9px] font-bold px-2 py-0.5 rounded uppercase tracking-wider z-10">Sale</span>
+                        <img src="https://images.unsplash.com/photo-1599576856515-581333e21cb3?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Backpack" class="max-h-full max-w-full object-contain group-hover:scale-105 transition-transform duration-300">
+                    </div>
+                    <div class="p-4 flex flex-col flex-grow">
+                        <span class="text-[10px] uppercase font-bold text-brand-primary mb-1 tracking-wider">Osprey</span>
+                        <h4 class="text-sm font-semibold text-gray-900 mb-1 leading-tight line-clamp-2">Atmos AG 65 Men's Backpacking Pack</h4>
+                        <div class="flex items-center text-yellow-400 text-xs mb-3">
+                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i>
+                            <span class="text-gray-400 ml-1.5 font-medium">(412)</span>
+                        </div>
+                        <div class="mt-auto pt-3 border-t border-gray-50 flex justify-between items-center">
+                            <span class="font-bold text-gray-900">₹22,000</span>
+                            <button class="w-8 h-8 rounded bg-gray-100 text-gray-600 hover:bg-brand-primary hover:text-white transition-colors flex items-center justify-center"><i class="fa-solid fa-arrow-right text-xs"></i></button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white border border-gray-100 rounded-lg overflow-hidden hover:shadow-xl transition-shadow duration-300 group flex flex-col cursor-pointer">
+                    <div class="h-44 relative p-4 bg-white flex items-center justify-center border-b border-gray-50">
+                        <span class="absolute top-2 left-2 bg-brand-dark text-white text-[9px] font-bold px-2 py-0.5 rounded uppercase tracking-wider z-10">Top Pick</span>
+                        <img src="https://images.unsplash.com/photo-1516035069371-29a1b244cc32?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Camera" class="max-h-full max-w-full object-contain group-hover:scale-105 transition-transform duration-300">
+                    </div>
+                    <div class="p-4 flex flex-col flex-grow">
+                        <span class="text-[10px] uppercase font-bold text-brand-primary mb-1 tracking-wider">Sony</span>
+                        <h4 class="text-sm font-semibold text-gray-900 mb-1 leading-tight line-clamp-2">Alpha 7 IV Full-Frame Mirrorless Camera</h4>
+                        <div class="flex items-center text-yellow-400 text-xs mb-3">
+                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                            <span class="text-gray-400 ml-1.5 font-medium">(89)</span>
+                        </div>
+                        <div class="mt-auto pt-3 border-t border-gray-50 flex justify-between items-center">
+                            <span class="font-bold text-gray-900">₹2,10,000</span>
+                            <button class="w-8 h-8 rounded bg-gray-100 text-gray-600 hover:bg-brand-primary hover:text-white transition-colors flex items-center justify-center"><i class="fa-solid fa-arrow-right text-xs"></i></button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white border border-gray-100 rounded-lg overflow-hidden hover:shadow-xl transition-shadow duration-300 group flex flex-col cursor-pointer">
+                    <div class="h-44 relative p-4 bg-white flex items-center justify-center border-b border-gray-50">
+                        <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Shoes" class="max-h-full max-w-full object-contain group-hover:scale-105 transition-transform duration-300">
+                    </div>
+                    <div class="p-4 flex flex-col flex-grow">
+                        <span class="text-[10px] uppercase font-bold text-brand-primary mb-1 tracking-wider">Salomon</span>
+                        <h4 class="text-sm font-semibold text-gray-900 mb-1 leading-tight line-clamp-2">Speedcross 6 Trail Running Shoes</h4>
+                        <div class="flex items-center text-yellow-400 text-xs mb-3">
+                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-regular fa-star"></i>
+                            <span class="text-gray-400 ml-1.5 font-medium">(320)</span>
+                        </div>
+                        <div class="mt-auto pt-3 border-t border-gray-50 flex justify-between items-center">
+                            <span class="font-bold text-gray-900">₹12,500</span>
+                            <button class="w-8 h-8 rounded bg-gray-100 text-gray-600 hover:bg-brand-primary hover:text-white transition-colors flex items-center justify-center"><i class="fa-solid fa-arrow-right text-xs"></i></button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white border border-gray-100 rounded-lg overflow-hidden hover:shadow-xl transition-shadow duration-300 group flex flex-col cursor-pointer">
+                    <div class="h-44 relative p-4 bg-white flex items-center justify-center border-b border-gray-50">
+                        <img src="https://images.unsplash.com/photo-1579822452445-565cb2fc4f30?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Drone" class="max-h-full max-w-full object-contain group-hover:scale-105 transition-transform duration-300">
+                    </div>
+                    <div class="p-4 flex flex-col flex-grow">
+                        <span class="text-[10px] uppercase font-bold text-brand-primary mb-1 tracking-wider">DJI</span>
+                        <h4 class="text-sm font-semibold text-gray-900 mb-1 leading-tight line-clamp-2">Mini 4 Pro Fly More Combo</h4>
+                        <div class="flex items-center text-yellow-400 text-xs mb-3">
+                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i>
+                            <span class="text-gray-400 ml-1.5 font-medium">(145)</span>
+                        </div>
+                        <div class="mt-auto pt-3 border-t border-gray-50 flex justify-between items-center">
+                            <span class="font-bold text-gray-900">₹85,000</span>
+                            <button class="w-8 h-8 rounded bg-gray-100 text-gray-600 hover:bg-brand-primary hover:text-white transition-colors flex items-center justify-center"><i class="fa-solid fa-arrow-right text-xs"></i></button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white border border-gray-100 rounded-lg overflow-hidden hover:shadow-xl transition-shadow duration-300 group flex flex-col cursor-pointer">
+                    <div class="h-44 relative p-4 bg-white flex items-center justify-center border-b border-gray-50">
+                        <img src="https://images.unsplash.com/photo-1583394838336-acd977736f90?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Headphones" class="max-h-full max-w-full object-contain group-hover:scale-105 transition-transform duration-300">
+                    </div>
+                    <div class="p-4 flex flex-col flex-grow">
+                        <span class="text-[10px] uppercase font-bold text-brand-primary mb-1 tracking-wider">Rode</span>
+                        <h4 class="text-sm font-semibold text-gray-900 mb-1 leading-tight line-clamp-2">Wireless Pro Compact Mic System</h4>
+                        <div class="flex items-center text-yellow-400 text-xs mb-3">
+                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                            <span class="text-gray-400 ml-1.5 font-medium">(67)</span>
+                        </div>
+                        <div class="mt-auto pt-3 border-t border-gray-50 flex justify-between items-center">
+                            <span class="font-bold text-gray-900">₹35,000</span>
+                            <button class="w-8 h-8 rounded bg-gray-100 text-gray-600 hover:bg-brand-primary hover:text-white transition-colors flex items-center justify-center"><i class="fa-solid fa-arrow-right text-xs"></i></button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white border border-gray-100 rounded-lg overflow-hidden hover:shadow-xl transition-shadow duration-300 group flex flex-col cursor-pointer">
+                    <div class="h-44 relative p-4 bg-white flex items-center justify-center border-b border-gray-50">
+                        <img src="https://images.unsplash.com/photo-1553062407-98eeb64c6a62?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Bag" class="max-h-full max-w-full object-contain group-hover:scale-105 transition-transform duration-300">
+                    </div>
+                    <div class="p-4 flex flex-col flex-grow">
+                        <span class="text-[10px] uppercase font-bold text-brand-primary mb-1 tracking-wider">Peak Design</span>
+                        <h4 class="text-sm font-semibold text-gray-900 mb-1 leading-tight line-clamp-2">Travel Backpack 45L</h4>
+                        <div class="flex items-center text-yellow-400 text-xs mb-3">
+                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i>
+                            <span class="text-gray-400 ml-1.5 font-medium">(210)</span>
+                        </div>
+                        <div class="mt-auto pt-3 border-t border-gray-50 flex justify-between items-center">
+                            <span class="font-bold text-gray-900">₹28,000</span>
+                            <button class="w-8 h-8 rounded bg-gray-100 text-gray-600 hover:bg-brand-primary hover:text-white transition-colors flex items-center justify-center"><i class="fa-solid fa-arrow-right text-xs"></i></button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white border border-gray-100 rounded-lg overflow-hidden hover:shadow-xl transition-shadow duration-300 group flex flex-col cursor-pointer">
+                    <div class="h-44 relative p-4 bg-white flex items-center justify-center border-b border-gray-50">
+                        <img src="https://images.unsplash.com/photo-1526406915894-7bcd65f60845?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Action Camera" class="max-h-full max-w-full object-contain group-hover:scale-105 transition-transform duration-300">
+                    </div>
+                    <div class="p-4 flex flex-col flex-grow">
+                        <span class="text-[10px] uppercase font-bold text-brand-primary mb-1 tracking-wider">GoPro</span>
+                        <h4 class="text-sm font-semibold text-gray-900 mb-1 leading-tight line-clamp-2">HERO12 Black Action Camera</h4>
+                        <div class="flex items-center text-yellow-400 text-xs mb-3">
+                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-regular fa-star"></i>
+                            <span class="text-gray-400 ml-1.5 font-medium">(842)</span>
+                        </div>
+                        <div class="mt-auto pt-3 border-t border-gray-50 flex justify-between items-center">
+                            <span class="font-bold text-gray-900">₹37,000</span>
+                            <button class="w-8 h-8 rounded bg-gray-100 text-gray-600 hover:bg-brand-primary hover:text-white transition-colors flex items-center justify-center"><i class="fa-solid fa-arrow-right text-xs"></i></button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white border border-gray-100 rounded-lg overflow-hidden hover:shadow-xl transition-shadow duration-300 group flex flex-col cursor-pointer">
+                    <div class="h-44 relative p-4 bg-white flex items-center justify-center border-b border-gray-50">
+                        <img src="https://images.unsplash.com/photo-1504280390227-331ef290d198?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Tent" class="max-h-full max-w-full object-contain group-hover:scale-105 transition-transform duration-300">
+                    </div>
+                    <div class="p-4 flex flex-col flex-grow">
+                        <span class="text-[10px] uppercase font-bold text-brand-primary mb-1 tracking-wider">MSR</span>
+                        <h4 class="text-sm font-semibold text-gray-900 mb-1 leading-tight line-clamp-2">Hubba Hubba NX 2-Person Tent</h4>
+                        <div class="flex items-center text-yellow-400 text-xs mb-3">
+                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                            <span class="text-gray-400 ml-1.5 font-medium">(188)</span>
+                        </div>
+                        <div class="mt-auto pt-3 border-t border-gray-50 flex justify-between items-center">
+                            <span class="font-bold text-gray-900">₹45,000</span>
+                            <button class="w-8 h-8 rounded bg-gray-100 text-gray-600 hover:bg-brand-primary hover:text-white transition-colors flex items-center justify-center"><i class="fa-solid fa-arrow-right text-xs"></i></button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white border border-gray-100 rounded-lg overflow-hidden hover:shadow-xl transition-shadow duration-300 group flex flex-col cursor-pointer">
+                    <div class="h-44 relative p-4 bg-white flex items-center justify-center border-b border-gray-50">
+                        <img src="https://images.unsplash.com/photo-1609081219090-a6d81d3085bf?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Power Bank" class="max-h-full max-w-full object-contain group-hover:scale-105 transition-transform duration-300">
+                    </div>
+                    <div class="p-4 flex flex-col flex-grow">
+                        <span class="text-[10px] uppercase font-bold text-brand-primary mb-1 tracking-wider">Anker</span>
+                        <h4 class="text-sm font-semibold text-gray-900 mb-1 leading-tight line-clamp-2">737 Power Bank (PowerCore 24K)</h4>
+                        <div class="flex items-center text-yellow-400 text-xs mb-3">
+                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i>
+                            <span class="text-gray-400 ml-1.5 font-medium">(530)</span>
+                        </div>
+                        <div class="mt-auto pt-3 border-t border-gray-50 flex justify-between items-center">
+                            <span class="font-bold text-gray-900">₹12,000</span>
+                            <button class="w-8 h-8 rounded bg-gray-100 text-gray-600 hover:bg-brand-primary hover:text-white transition-colors flex items-center justify-center"><i class="fa-solid fa-arrow-right text-xs"></i></button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white border border-gray-100 rounded-lg overflow-hidden hover:shadow-xl transition-shadow duration-300 group flex flex-col cursor-pointer">
+                    <div class="h-44 relative p-4 bg-white flex items-center justify-center border-b border-gray-50">
+                        <img src="https://images.unsplash.com/photo-1502920514313-52581002a659?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Watch" class="max-h-full max-w-full object-contain group-hover:scale-105 transition-transform duration-300">
+                    </div>
+                    <div class="p-4 flex flex-col flex-grow">
+                        <span class="text-[10px] uppercase font-bold text-brand-primary mb-1 tracking-wider">Garmin</span>
+                        <h4 class="text-sm font-semibold text-gray-900 mb-1 leading-tight line-clamp-2">fēnix 7 Multisport GPS Watch</h4>
+                        <div class="flex items-center text-yellow-400 text-xs mb-3">
+                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                            <span class="text-gray-400 ml-1.5 font-medium">(312)</span>
+                        </div>
+                        <div class="mt-auto pt-3 border-t border-gray-50 flex justify-between items-center">
+                            <span class="font-bold text-gray-900">₹65,000</span>
+                            <button class="w-8 h-8 rounded bg-gray-100 text-gray-600 hover:bg-brand-primary hover:text-white transition-colors flex items-center justify-center"><i class="fa-solid fa-arrow-right text-xs"></i></button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white border border-gray-100 rounded-lg overflow-hidden hover:shadow-xl transition-shadow duration-300 group flex flex-col cursor-pointer">
+                    <div class="h-44 relative p-4 bg-white flex items-center justify-center border-b border-gray-50">
+                        <img src="https://images.unsplash.com/photo-1542152609-b7b51bc52825?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Lens" class="max-h-full max-w-full object-contain group-hover:scale-105 transition-transform duration-300">
+                    </div>
+                    <div class="p-4 flex flex-col flex-grow">
+                        <span class="text-[10px] uppercase font-bold text-brand-primary mb-1 tracking-wider">Sony</span>
+                        <h4 class="text-sm font-semibold text-gray-900 mb-1 leading-tight line-clamp-2">FE 24-70mm f/2.8 GM II Lens</h4>
+                        <div class="flex items-center text-yellow-400 text-xs mb-3">
+                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                        </div>
+                        <div class="mt-auto pt-3 border-t border-gray-50 flex justify-between items-center">
+                            <span class="font-bold text-gray-900">₹1,90,000</span>
+                            <button class="w-8 h-8 rounded bg-gray-100 text-gray-600 hover:bg-brand-primary hover:text-white transition-colors"><i class="fa-solid fa-arrow-right text-xs"></i></button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white border border-gray-100 rounded-lg overflow-hidden hover:shadow-xl transition-shadow duration-300 group flex flex-col cursor-pointer">
+                    <div class="h-44 relative p-4 bg-white flex items-center justify-center border-b border-gray-50">
+                        <img src="https://images.unsplash.com/photo-1581691880496-c67dff1be25c?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Tripod" class="max-h-full max-w-full object-contain group-hover:scale-105 transition-transform duration-300">
+                    </div>
+                    <div class="p-4 flex flex-col flex-grow">
+                        <span class="text-[10px] uppercase font-bold text-brand-primary mb-1 tracking-wider">Joby</span>
+                        <h4 class="text-sm font-semibold text-gray-900 mb-1 leading-tight line-clamp-2">GorillaPod 3K Flexible Tripod</h4>
+                        <div class="flex items-center text-yellow-400 text-xs mb-3">
+                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-regular fa-star"></i>
+                        </div>
+                        <div class="mt-auto pt-3 border-t border-gray-50 flex justify-between items-center">
+                            <span class="font-bold text-gray-900">₹4,500</span>
+                            <button class="w-8 h-8 rounded bg-gray-100 text-gray-600 hover:bg-brand-primary hover:text-white transition-colors"><i class="fa-solid fa-arrow-right text-xs"></i></button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white border border-gray-100 rounded-lg overflow-hidden hover:shadow-xl transition-shadow duration-300 group flex flex-col cursor-pointer">
+                    <div class="h-44 relative p-4 bg-white flex items-center justify-center border-b border-gray-50">
+                        <img src="https://images.unsplash.com/photo-1551698618-1dfe5d97d256?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Boots" class="max-h-full max-w-full object-contain group-hover:scale-105 transition-transform duration-300">
+                    </div>
+                    <div class="p-4 flex flex-col flex-grow">
+                        <span class="text-[10px] uppercase font-bold text-brand-primary mb-1 tracking-wider">Columbia</span>
+                        <h4 class="text-sm font-semibold text-gray-900 mb-1 leading-tight line-clamp-2">Newton Ridge Waterproof Boots</h4>
+                        <div class="flex items-center text-yellow-400 text-xs mb-3">
+                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i>
+                        </div>
+                        <div class="mt-auto pt-3 border-t border-gray-50 flex justify-between items-center">
+                            <span class="font-bold text-gray-900">₹8,000</span>
+                            <button class="w-8 h-8 rounded bg-gray-100 text-gray-600 hover:bg-brand-primary hover:text-white transition-colors"><i class="fa-solid fa-arrow-right text-xs"></i></button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white border border-gray-100 rounded-lg overflow-hidden hover:shadow-xl transition-shadow duration-300 group flex flex-col cursor-pointer">
+                    <div class="h-44 relative p-4 bg-white flex items-center justify-center border-b border-gray-50">
+                        <img src="https://images.unsplash.com/photo-1520626027415-05eec46535fa?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Lighting" class="max-h-full max-w-full object-contain group-hover:scale-105 transition-transform duration-300">
+                    </div>
+                    <div class="p-4 flex flex-col flex-grow">
+                        <span class="text-[10px] uppercase font-bold text-brand-primary mb-1 tracking-wider">Lume Cube</span>
+                        <h4 class="text-sm font-semibold text-gray-900 mb-1 leading-tight line-clamp-2">Panel Pro RGB Smart Light</h4>
+                        <div class="flex items-center text-yellow-400 text-xs mb-3">
+                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-regular fa-star"></i>
+                        </div>
+                        <div class="mt-auto pt-3 border-t border-gray-50 flex justify-between items-center">
+                            <span class="font-bold text-gray-900">₹15,000</span>
+                            <button class="w-8 h-8 rounded bg-gray-100 text-gray-600 hover:bg-brand-primary hover:text-white transition-colors"><i class="fa-solid fa-arrow-right text-xs"></i></button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white border border-gray-100 rounded-lg overflow-hidden hover:shadow-xl transition-shadow duration-300 group flex flex-col cursor-pointer">
+                    <div class="h-44 relative p-4 bg-white flex items-center justify-center border-b border-gray-50">
+                        <img src="https://images.unsplash.com/photo-1589389279586-1d187df5bf27?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Camera Pack" class="max-h-full max-w-full object-contain group-hover:scale-105 transition-transform duration-300">
+                    </div>
+                    <div class="p-4 flex flex-col flex-grow">
+                        <span class="text-[10px] uppercase font-bold text-brand-primary mb-1 tracking-wider">Nomatic</span>
+                        <h4 class="text-sm font-semibold text-gray-900 mb-1 leading-tight line-clamp-2">McKinnon Camera Pack 35L</h4>
+                        <div class="flex items-center text-yellow-400 text-xs mb-3">
+                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                        </div>
+                        <div class="mt-auto pt-3 border-t border-gray-50 flex justify-between items-center">
+                            <span class="font-bold text-gray-900">₹32,000</span>
+                            <button class="w-8 h-8 rounded bg-gray-100 text-gray-600 hover:bg-brand-primary hover:text-white transition-colors"><i class="fa-solid fa-arrow-right text-xs"></i></button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white border border-gray-100 rounded-lg overflow-hidden hover:shadow-xl transition-shadow duration-300 group flex flex-col cursor-pointer">
+                    <div class="h-44 relative p-4 bg-white flex items-center justify-center border-b border-gray-50">
+                        <img src="https://images.unsplash.com/photo-1549488344-1f9b8d2bd1f3?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Action Cam" class="max-h-full max-w-full object-contain group-hover:scale-105 transition-transform duration-300">
+                    </div>
+                    <div class="p-4 flex flex-col flex-grow">
+                        <span class="text-[10px] uppercase font-bold text-brand-primary mb-1 tracking-wider">Insta360</span>
+                        <h4 class="text-sm font-semibold text-gray-900 mb-1 leading-tight line-clamp-2">X3 Waterproof 360 Action Cam</h4>
+                        <div class="flex items-center text-yellow-400 text-xs mb-3">
+                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i>
+                        </div>
+                        <div class="mt-auto pt-3 border-t border-gray-50 flex justify-between items-center">
+                            <span class="font-bold text-gray-900">₹42,000</span>
+                            <button class="w-8 h-8 rounded bg-gray-100 text-gray-600 hover:bg-brand-primary hover:text-white transition-colors"><i class="fa-solid fa-arrow-right text-xs"></i></button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white border border-gray-100 rounded-lg overflow-hidden hover:shadow-xl transition-shadow duration-300 group flex flex-col cursor-pointer">
+                    <div class="h-44 relative p-4 bg-white flex items-center justify-center border-b border-gray-50">
+                        <span class="absolute top-2 left-2 bg-brand-dark text-white text-[9px] font-bold px-2 py-0.5 rounded uppercase tracking-wider z-10">Best Seller</span>
+                        <img src="https://images.unsplash.com/photo-1606107557195-0e29a4b5b4aa?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Shoes" class="max-h-full max-w-full object-contain group-hover:scale-105 transition-transform duration-300">
+                    </div>
+                    <div class="p-4 flex flex-col flex-grow">
+                        <span class="text-[10px] uppercase font-bold text-brand-primary mb-1 tracking-wider">Hoka</span>
+                        <h4 class="text-sm font-semibold text-gray-900 mb-1 leading-tight line-clamp-2">Speedgoat 5 Trail Shoes</h4>
+                        <div class="flex items-center text-yellow-400 text-xs mb-3">
+                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                        </div>
+                        <div class="mt-auto pt-3 border-t border-gray-50 flex justify-between items-center">
+                            <span class="font-bold text-gray-900">₹14,000</span>
+                            <button class="w-8 h-8 rounded bg-gray-100 text-gray-600 hover:bg-brand-primary hover:text-white transition-colors"><i class="fa-solid fa-arrow-right text-xs"></i></button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white border border-gray-100 rounded-lg overflow-hidden hover:shadow-xl transition-shadow duration-300 group flex flex-col cursor-pointer">
+                    <div class="h-44 relative p-4 bg-white flex items-center justify-center border-b border-gray-50">
+                        <img src="https://images.unsplash.com/photo-1601004122394-1a221fccb222?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Camera" class="max-h-full max-w-full object-contain group-hover:scale-105 transition-transform duration-300">
+                    </div>
+                    <div class="p-4 flex flex-col flex-grow">
+                        <span class="text-[10px] uppercase font-bold text-brand-primary mb-1 tracking-wider">DJI</span>
+                        <h4 class="text-sm font-semibold text-gray-900 mb-1 leading-tight line-clamp-2">Osmo Pocket 3 Gimbal Camera</h4>
+                        <div class="flex items-center text-yellow-400 text-xs mb-3">
+                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-regular fa-star"></i>
+                        </div>
+                        <div class="mt-auto pt-3 border-t border-gray-50 flex justify-between items-center">
+                            <span class="font-bold text-gray-900">₹50,000</span>
+                            <button class="w-8 h-8 rounded bg-gray-100 text-gray-600 hover:bg-brand-primary hover:text-white transition-colors"><i class="fa-solid fa-arrow-right text-xs"></i></button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white border border-gray-100 rounded-lg overflow-hidden hover:shadow-xl transition-shadow duration-300 group flex flex-col cursor-pointer">
+                    <div class="h-44 relative p-4 bg-white flex items-center justify-center border-b border-gray-50">
+                        <img src="https://images.unsplash.com/photo-1574880996843-8f0a3e8e1903?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Headlamp" class="max-h-full max-w-full object-contain group-hover:scale-105 transition-transform duration-300">
+                    </div>
+                    <div class="p-4 flex flex-col flex-grow">
+                        <span class="text-[10px] uppercase font-bold text-brand-primary mb-1 tracking-wider">Petzl</span>
+                        <h4 class="text-sm font-semibold text-gray-900 mb-1 leading-tight line-clamp-2">Actik Core Rechargeable Headlamp</h4>
+                        <div class="flex items-center text-yellow-400 text-xs mb-3">
+                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i>
+                        </div>
+                        <div class="mt-auto pt-3 border-t border-gray-50 flex justify-between items-center">
+                            <span class="font-bold text-gray-900">₹6,500</span>
+                            <button class="w-8 h-8 rounded bg-gray-100 text-gray-600 hover:bg-brand-primary hover:text-white transition-colors"><i class="fa-solid fa-arrow-right text-xs"></i></button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white border border-gray-100 rounded-lg overflow-hidden hover:shadow-xl transition-shadow duration-300 group flex flex-col cursor-pointer">
+                    <div class="h-44 relative p-4 bg-white flex items-center justify-center border-b border-gray-50">
+                        <img src="https://images.unsplash.com/photo-1590602847861-f357a9332bbc?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Microphone" class="max-h-full max-w-full object-contain group-hover:scale-105 transition-transform duration-300">
+                    </div>
+                    <div class="p-4 flex flex-col flex-grow">
+                        <span class="text-[10px] uppercase font-bold text-brand-primary mb-1 tracking-wider">Shure</span>
+                        <h4 class="text-sm font-semibold text-gray-900 mb-1 leading-tight line-clamp-2">SM7B Vocal Dynamic Microphone</h4>
+                        <div class="flex items-center text-yellow-400 text-xs mb-3">
+                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                        </div>
+                        <div class="mt-auto pt-3 border-t border-gray-50 flex justify-between items-center">
+                            <span class="font-bold text-gray-900">₹35,000</span>
+                            <button class="w-8 h-8 rounded bg-gray-100 text-gray-600 hover:bg-brand-primary hover:text-white transition-colors"><i class="fa-solid fa-arrow-right text-xs"></i></button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="mt-12 flex justify-center">
+                <button class="bg-white border-2 border-brand-primary text-brand-primary hover:bg-brand-primary hover:text-white transition-colors px-10 py-3 rounded-full font-semibold shadow-sm hover:shadow-md">
+                    Load More Gear
+                </button>
+            </div>
+
         </div>
     </div>
 
-    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-        <div class="flex flex-col lg:flex-row gap-12">
-            
-            <!-- Sidebar Navigation -->
-            <div class="lg:w-1/4">
-                <div class="bg-white p-6 rounded-sm shadow-sm border border-gray-200 sticky top-28">
-                    <h3 class="font-bold text-lg text-gray-900 mb-4 border-b pb-2 uppercase tracking-wide">Categories</h3>
-                    <ul class="space-y-3 text-sm font-medium text-gray-600">
-                        <li><a href="#" class="whitespace-nowrap hover:text-brand-primary flex items-center justify-between">Backpacks <i class="fa-solid fa-chevron-right text-xs"></i></a></li>
-                        <li><a href="#" class="whitespace-nowrap hover:text-brand-primary flex items-center justify-between">Footwear <i class="fa-solid fa-chevron-right text-xs"></i></a></li>
-                        <li><a href="#" class="whitespace-nowrap hover:text-brand-primary flex items-center justify-between">Camping & Tents <i class="fa-solid fa-chevron-right text-xs"></i></a></li>
-                        <li><a href="#" class="whitespace-nowrap hover:text-brand-primary flex items-center justify-between">Camera Gear <i class="fa-solid fa-chevron-right text-xs"></i></a></li>
-                        <li><a href="#" class="whitespace-nowrap hover:text-brand-primary flex items-center justify-between">Travel Tech <i class="fa-solid fa-chevron-right text-xs"></i></a></li>
-                    </ul>
-                </div>
-            </div>
-
-            <!-- Main Review Feed -->
-            <div class="lg:w-3/4 space-y-8">
-                
-                <!-- Review Card 1 -->
-                <div class="bg-white rounded-sm shadow-sm border border-gray-200 flex flex-col md:flex-row overflow-hidden group">
-                    <div class="md:w-2/5 h-64 md:h-auto bg-gray-100 overflow-hidden">
-                        <img src="IMG20260629095114.jpg" alt="Backpack and gear" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" onerror="this.src='https://images.unsplash.com/photo-1622260614153-03223fb72052?w=800&q=80'">
-                    </div>
-                    <div class="md:w-3/5 p-8 flex flex-col justify-center">
-                        <span class="text-[10px] font-bold text-gray-400 uppercase tracking-widest mb-2">Backpacks</span>
-                        <h2 class="text-2xl font-bold text-gray-900 mb-2 leading-tight">Osprey Atmos AG 65 Review: The King of Comfort?</h2>
-                        <div class="flex text-yellow-400 text-sm mb-4">
-                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i>
-                            <span class="text-gray-400 text-xs ml-2 font-medium">(4.8/5)</span>
-                        </div>
-                        <p class="text-gray-600 text-sm mb-6 leading-relaxed">After putting 100+ miles on this pack through the Sahyadris, here is exactly how the anti-gravity suspension holds up in extreme heat and rain.</p>
-                        <div>
-                            <a href="#" class="bg-brand-primary text-white px-6 py-2.5 rounded-sm font-bold text-sm hover:bg-sky-800 transition-colors uppercase tracking-wider inline-block">Read Full Review</a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Review Card 2 -->
-                <div class="bg-white rounded-sm shadow-sm border border-gray-200 flex flex-col md:flex-row overflow-hidden group">
-                    <div class="md:w-2/5 h-64 md:h-auto bg-gray-100 overflow-hidden">
-                        <img src="https://images.unsplash.com/photo-1608231387042-66d1773070a5?w=800&q=80" alt="Trail Shoes" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
-                    </div>
-                    <div class="md:w-3/5 p-8 flex flex-col justify-center">
-                        <span class="text-[10px] font-bold text-gray-400 uppercase tracking-widest mb-2">Footwear</span>
-                        <h2 class="text-2xl font-bold text-gray-900 mb-2 leading-tight">Salomon Speedcross 5 vs. Monsoon Mud</h2>
-                        <div class="flex text-yellow-400 text-sm mb-4">
-                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-regular fa-star"></i>
-                            <span class="text-gray-400 text-xs ml-2 font-medium">(4.0/5)</span>
-                        </div>
-                        <p class="text-gray-600 text-sm mb-6 leading-relaxed">Are trail runners better than heavy boots for Indian monsoons? We tested the grip on slippery Raigad rock faces.</p>
-                        <div>
-                            <a href="#" class="bg-brand-primary text-white px-6 py-2.5 rounded-sm font-bold text-sm hover:bg-sky-800 transition-colors uppercase tracking-wider inline-block">Read Full Review</a>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-    </main>
-    
-    <!-- Footer -->
-    <footer class="bg-brand-dark text-gray-300 pt-16 pb-8">
+    <footer class="bg-brand-dark text-gray-300 pt-16 pb-8 border-t-4 border-brand-primary">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
-                
                 <div>
-                    <a href="index.html">
-                        <h4 class="font-serif text-2xl font-bold text-white tracking-tight mb-6">SSS<span class="text-brand-primary">universe</span></h4>
-                    </a>
+                    <h4 class="font-serif text-2xl font-bold text-white tracking-tight mb-6">SSS<span class="text-brand-primary">universe</span></h4>
                     <p class="text-sm text-gray-400 mb-6 leading-relaxed">Helping you travel smarter, trek harder, and explore the world with practical guides and honest gear reviews.</p>
-                    <div class="flex space-x-4">
-                        <a href="https://www.instagram.com" class="w-8 h-8 rounded-full bg-gray-800 flex items-center justify-center hover:bg-brand-primary hover:text-white transition-colors"><i class="fa-brands fa-instagram text-sm"></i></a>
-                        <a href="https://www.youtube.com" class="w-8 h-8 rounded-full bg-gray-800 flex items-center justify-center hover:bg-brand-primary hover:text-white transition-colors"><i class="fa-brands fa-youtube text-sm"></i></a>
-                        <a href="https://www.twitter.com" class="w-8 h-8 rounded-full bg-gray-800 flex items-center justify-center hover:bg-brand-primary hover:text-white transition-colors"><i class="fa-brands fa-twitter text-sm"></i></a>
-                    </div>
                 </div>
-
                 <div>
                     <h4 class="text-white font-bold uppercase tracking-wider text-sm mb-6">Explore</h4>
                     <ul class="space-y-3 text-sm">
                         <li><a href="index.html" class="hover:text-brand-primary transition-colors">Home</a></li>
                         <li><a href="plan.html" class="hover:text-brand-primary transition-colors">Plan Your Trip</a></li>
                         <li><a href="destinations.html" class="hover:text-brand-primary transition-colors">Destinations</a></li>
-                        <li><a href="gear-hub.html" class="hover:text-brand-primary transition-colors">Gear Hub</a></li>
+                        <li><a href="gear-hub.html" class="text-brand-primary">Gear Hub</a></li>
                     </ul>
                 </div>
-
                 <div>
                     <h4 class="text-white font-bold uppercase tracking-wider text-sm mb-6">Top Regions</h4>
                     <ul class="space-y-3 text-sm">
                         <li><a href="#" class="hover:text-brand-primary transition-colors">Maharashtra Treks</a></li>
                         <li><a href="#" class="hover:text-brand-primary transition-colors">Southeast Asia</a></li>
-                        <li><a href="#" class="hover:text-brand-primary transition-colors">Western Europe</a></li>
-                        <li><a href="#" class="hover:text-brand-primary transition-colors">The Balkans</a></li>
                     </ul>
                 </div>
-
                 <div>
                     <h4 class="text-white font-bold uppercase tracking-wider text-sm mb-6">Info</h4>
                     <ul class="space-y-3 text-sm">
-                        <li><a href="#" class="hover:text-brand-primary transition-colors">About SSSuniverse</a></li>
-                        <li><a href="#" class="hover:text-brand-primary transition-colors">Contact</a></li>
-                        <li><a href="#" class="hover:text-brand-primary transition-colors">Privacy Policy</a></li>
-                        <li><a href="#" class="hover:text-brand-primary transition-colors">Terms of Service</a></li>
+                        <li><a href="about.html" class="hover:text-brand-primary transition-colors">About SSSuniverse</a></li>
+                        <li><a href="contact.html" class="hover:text-brand-primary transition-colors">Contact</a></li>
                     </ul>
                 </div>
-
             </div>
-            
             <div class="pt-8 border-t border-gray-800 text-sm text-center text-gray-500">
-                &copy; <script>document.write(new Date().getFullYear())</script> SSSuniverse. All rights reserved. Designed for adventure.
+                © <script>document.write(new Date().getFullYear())</script> SSSuniverse. All rights reserved. Designed for adventure.
             </div>
         </div>
     </footer>
+
     <script>
-            document.addEventListener("DOMContentLoaded", function() {
-                const mobileMenuButton = document.getElementById('mobile-menu-button'); // Hamburger icon
-                const closeMenuButton = document.getElementById('close-menu-button'); // X icon inside drawer
-                const mobileMenu = document.getElementById('mobile-menu');
-                const backdrop = document.getElementById('mobile-menu-backdrop');
+        document.addEventListener("DOMContentLoaded", function() {
+            const mobileMenuButton = document.getElementById('mobile-menu-button');
+            const closeMenuButton = document.getElementById('close-menu-button');
+            const mobileMenu = document.getElementById('mobile-menu');
+            const backdrop = document.getElementById('mobile-menu-backdrop');
 
-                // Function to open the drawer
-                function openMenu() {
-                    mobileMenu.classList.remove('translate-x-full');
-                    mobileMenu.classList.add('translate-x-0');
-                    backdrop.classList.remove('hidden');
-                    document.body.style.overflow = 'hidden'; // Prevents background scrolling
-                }
+            function openMenu() {
+                mobileMenu.classList.remove('translate-x-full');
+                mobileMenu.classList.add('translate-x-0');
+                backdrop.classList.remove('hidden');
+                document.body.style.overflow = 'hidden';
+            }
 
-                // Function to close the drawer
-                function closeMenu() {
-                    mobileMenu.classList.remove('translate-x-0');
-                    mobileMenu.classList.add('translate-x-full');
-                    backdrop.classList.add('hidden');
-                    document.body.style.overflow = ''; // Restores scrolling
-                }
+            function closeMenu() {
+                mobileMenu.classList.remove('translate-x-0');
+                mobileMenu.classList.add('translate-x-full');
+                backdrop.classList.add('hidden');
+                document.body.style.overflow = ''; 
+            }
 
-                // Click Events
-                mobileMenuButton.addEventListener('click', openMenu);
-                closeMenuButton.addEventListener('click', closeMenu);
-                
-                // Clicking the dark background also closes the menu
-                backdrop.addEventListener('click', closeMenu); 
-            });
-        </script>
+            mobileMenuButton.addEventListener('click', openMenu);
+            closeMenuButton.addEventListener('click', closeMenu);
+            backdrop.addEventListener('click', closeMenu); 
+        });
+    </script>
 </body>
 </html>
